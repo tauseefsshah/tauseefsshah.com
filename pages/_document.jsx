@@ -5,7 +5,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body className="body-container bg-[#161616] text-white">
+      <body className="body-container bg-primary-background text-white">
         <header className="content-box">
           <div className="flex justify-between items-center">
             <div
@@ -16,19 +16,19 @@ export default function Document() {
             </div>
             <nav id="logo">
               <ul className="flex gap-4">
-                <li className="p-2 rounded-full hover:bg-[#363636]">
+                <li className="p-2 rounded-full hover:bg-primary">
                   <Home className="h-5 w-5" />
                 </li>
-                <li className="p-2 rounded-full hover:bg-[#363636]">
+                <li className="p-2 rounded-full hover:bg-primary">
                   <UserCircle className="h-5 w-5" />
                 </li>
-                <li className="p-2 rounded-full hover:bg-[#363636]">
+                <li className="p-2 rounded-full hover:bg-primary">
                   <AppWindowMac className="h-5 w-5" />
                 </li>
               </ul>
             </nav>
             <div id="cta">
-              <div className="p-2 rounded-full hover:bg-[#363636]">
+              <div className="p-2 rounded-full hover:bg-primary">
                 <Inbox className="h-5 w-5" />
               </div>
             </div>
