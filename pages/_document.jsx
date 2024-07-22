@@ -8,7 +8,10 @@ export default function Document() {
       <body className="body-container bg-[#161616] text-white">
         <header className="content-box">
           <div className="flex justify-between items-center">
-            <div id="logo" className="bg-white text-black rounded-full p-2">
+            <div
+              id="logo"
+              className="bg-white text-black rounded-full p-2 font-bold"
+            >
               TS
             </div>
             <nav id="logo">
@@ -26,7 +29,8 @@ export default function Document() {
             </nav>
             <div id="cta">
               <div className="p-2 rounded-full hover:bg-[#363636]">
-                <Inbox className="h-5 w-5" /></div>
+                <Inbox className="h-5 w-5" />
+              </div>
             </div>
           </div>
         </header>
