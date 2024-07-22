@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { AppWindowMac, Home, Inbox, UserCircle } from "lucide-react";
 import {
   SiDiscord,
   SiGithub,
@@ -6,7 +8,6 @@ import {
   SiTelegram,
   SiX,
 } from "@icons-pack/react-simple-icons";
-import { AppWindowMac, Home, Inbox, UserCircle } from "lucide-react";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -24,25 +25,48 @@ export default function Document() {
             </div>
             <nav id="logo">
               <ul className="flex gap-4">
-                <li className="p-2 rounded-full hover:bg-primary">
-                  <Home className="h-5 w-5" />
-                </li>
-                <li className="p-2 rounded-full hover:bg-primary">
-                  <UserCircle className="h-5 w-5" />
-                </li>
-                <li className="p-2 rounded-full hover:bg-primary">
-                  <AppWindowMac className="h-5 w-5" />
-                </li>
+                {[
+                  {
+                    title: "Home",
+                    icon: <Home className="h-5 w-5" />,
+                    link: "/",
+                    active: false,
+                  },
+                  {
+                    title: "About",
+                    icon: <UserCircle className="h-5 w-5" />,
+                    link: "/about",
+                    active: false,
+                  },
+                  {
+                    title: "Projects",
+                    icon: <AppWindowMac className="h-5 w-5" />,
+                    link: "/projects",
+                    active: false,
+                  },
+                ].map((navigationItem) => (
+                  <Link key={navigationItem.title} href={navigationItem.link}>
+                    <li
+                      title={navigationItem.title}
+                      className="p-2 rounded-full hover:bg-primary"
+                    >
+                      {navigationItem.icon}
+                    </li>
+                  </Link>
+                ))}
               </ul>
             </nav>
             <div id="cta">
               <div className="p-2 rounded-full hover:bg-primary">
-                <Inbox className="h-5 w-5" />
+                <Link href="/contact">
+                  <Inbox className="h-5 w-5" />
+                </Link>
               </div>
             </div>
           </div>
         </header>
         <Main />
+
         <footer className="content-box">
           <div className="flex flex-col gap-4 items-center">
             <div className="flex gap-4">
