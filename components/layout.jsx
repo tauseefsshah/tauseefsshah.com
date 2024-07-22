@@ -8,8 +8,11 @@ import {
   SiTelegram,
   SiX,
 } from "@icons-pack/react-simple-icons";
+import { usePathname } from "next/navigation";
 
 export default function Layout({ children }) {
+  const pathname = usePathname();
+
   return (
     <>
       <header className="content-box">
@@ -27,25 +30,28 @@ export default function Layout({ children }) {
                   title: "Home",
                   icon: <Home className="h-5 w-5" />,
                   link: "/",
-                  active: false,
+                  active: "/" === pathname,
                 },
                 {
                   title: "About",
                   icon: <UserCircle className="h-5 w-5" />,
                   link: "/about",
-                  active: false,
+                  active: "about" === pathname,
                 },
                 {
                   title: "Projects",
                   icon: <AppWindowMac className="h-5 w-5" />,
                   link: "/projects",
-                  active: false,
+                  active: "projects" === pathname,
                 },
               ].map((navigationItem) => (
                 <Link key={navigationItem.title} href={navigationItem.link}>
                   <li
                     title={navigationItem.title}
-                    className="p-2 rounded-full hover:bg-primary"
+                    className={
+                      "p-2 rounded-full hover:bg-primary" +
+                      (navigationItem.link === pathname ? " bg-primary" : "")
+                    }
                   >
                     {navigationItem.icon}
                   </li>
@@ -54,7 +60,12 @@ export default function Layout({ children }) {
             </ul>
           </nav>
           <div id="cta">
-            <div className="p-2 rounded-full hover:bg-primary">
+            <div
+              className={
+                "p-2 rounded-full hover:bg-primary" +
+                ("/contact" === pathname ? " bg-primary" : "")
+              }
+            >
               <Link href="/contact">
                 <Inbox className="h-5 w-5" />
               </Link>
