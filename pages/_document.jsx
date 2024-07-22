@@ -1,3 +1,11 @@
+import {
+  SiDiscord,
+  SiGithub,
+  SiLinkedin,
+  SiSignal,
+  SiTelegram,
+  SiX,
+} from "@icons-pack/react-simple-icons";
 import { AppWindowMac, Home, Inbox, UserCircle } from "lucide-react";
 import { Html, Head, Main, NextScript } from "next/document";
 
@@ -36,8 +44,53 @@ export default function Document() {
         </header>
         <Main />
         <footer className="content-box">
-          <div className="text-center text-sm uppercase">
-            &copy; {new Date().getFullYear()}. Tauseef Shah
+          <div className="flex flex-col gap-4 items-center">
+            <div className="flex gap-4">
+              {[
+                {
+                  platform: "x",
+                  link: "https://x.com/tauseefsshah",
+                  icon: <SiX className="h-5 w-5" />,
+                },
+                {
+                  platform: "linkedin",
+                  link: "https://linkedin.com/in/tauseefsshah",
+                  icon: <SiLinkedin className="h-5 w-5" />,
+                },
+                {
+                  platform: "github",
+                  link: "https://github.com/tauseefsshah",
+                  icon: <SiGithub className="h-5 w-5" />,
+                },
+                {
+                  platform: "discord",
+                  link: "https://discordapp.com/users/742727242823499847",
+                  icon: <SiDiscord className="h-5 w-5" />,
+                },
+                {
+                  platform: "signal",
+                  link: "https://signal.me/#u/tauseefsshah.01",
+                  icon: <SiSignal className="h-5 w-5" />,
+                },
+                {
+                  platform: "telegram",
+                  link: "https://t.me/tauseefsshah",
+                  icon: <SiTelegram className="h-5 w-5" />,
+                },
+              ].map((socialMedia) => (
+                <a
+                  key={socialMedia.platform}
+                  href={socialMedia.link}
+                  target="_blank"
+                  title={socialMedia.platform}
+                >
+                  {socialMedia.icon}
+                </a>
+              ))}
+            </div>
+            <div className="text-sm uppercase">
+              &copy; {new Date().getFullYear()}. Tauseef Shah
+            </div>
           </div>
         </footer>
         <NextScript />
