@@ -14,7 +14,7 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <header className="content-box">
+      <header className="content-box my-8">
         <div className="flex justify-between items-center">
           <div
             id="logo"
@@ -40,8 +40,8 @@ export default function Layout({ children }) {
                 {
                   title: "Projects",
                   icon: <AppWindowMac className="h-5 w-5" />,
-                  link: "/projects",
-                  active: "projects" === pathname,
+                  link: "/work",
+                  active: "work" === pathname,
                 },
               ].map((navigationItem) => (
                 <Link key={navigationItem.title} href={navigationItem.link}>
@@ -75,7 +75,7 @@ export default function Layout({ children }) {
 
       <main>{children}</main>
 
-      <footer className="content-box">
+      <footer className="content-box my-8">
         <div className="flex flex-col gap-4 items-center">
           <div className="flex gap-4">
             {[
