@@ -1,14 +1,13 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { AppWindowMac, Home, Inbox, UserCircle } from "lucide-react";
 import {
-  SiDiscord,
-  SiGithub,
-  SiLinkedin,
-  SiSignal,
-  SiTelegram,
   SiX,
+  SiGithub,
+  SiDiscord,
+  SiTelegram,
+  SiLinkedin,
 } from "@icons-pack/react-simple-icons";
-import { usePathname } from "next/navigation";
 
 export default function Layout({ children }) {
   const pathname = usePathname();
@@ -99,11 +98,6 @@ export default function Layout({ children }) {
                 platform: "discord",
                 link: "https://discordapp.com/users/742727242823499847",
                 icon: <SiDiscord className="h-5 w-5" />,
-              },
-              {
-                platform: "signal",
-                link: "https://signal.me/#u/tauseefsshah.01",
-                icon: <SiSignal className="h-5 w-5" />,
               },
               {
                 platform: "telegram",
