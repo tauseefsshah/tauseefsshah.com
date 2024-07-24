@@ -22,7 +22,7 @@ export default function work() {
                       target="_blank"
                     >
                       {project.organisation}
-                      <ArrowUpRight className="h-5 w-5" />
+                      <ArrowUpRight className="h-4 w-4" />
                     </a>
                   )}
                 </li>

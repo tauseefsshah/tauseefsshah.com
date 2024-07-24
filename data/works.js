@@ -1,65 +1,65 @@
 const works = [
   {
-    title: "SCADL",
-    link: "https://weddings.imprintskashmir.in/?utm_source=tauseefsshah.com",
-    organisation: "Sheen Graphics",
-    stack: ["Laravel", "React", "InertiaJS", "TailwindCSS", "AWS"],
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia dolorum corporis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia.",
-  },
-  {
-    title: "Imprints Wedding Card Portfolio",
-    link: "https://weddings.imprintskashmir.in/?utm_source=tauseefsshah.com",
-    organisation: "Sheen Graphics",
-    stack: ["Laravel", "React", "InertiaJS", "TailwindCSS", "AWS"],
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia dolorum corporis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia.",
-  },
-  {
-    title: "Online Store",
-    link: "https://shop.sheengraphics.com?utm_source=tauseefsshah.com",
-    organisation: "Sheen Graphics",
-    stack: ["Laravel", "React", "InertiaJS", "TailwindCSS", "AWS"],
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia dolorum corporis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia.",
-  },
-  {
-    title: "Flynterest",
+    title: "B2B Flight Inventory Management And Distribution Platform",
     link: "https://flynterest.com/?utm_source=tauseefsshah.com",
     organisation: "Flynterest",
-    stack: ["Laravel", "React", "InertiaJS", "TailwindCSS", "AWS"],
+    stack: ["Laravel", "MySQL", "React", "TailwindCSS", "InertiaJS", "AlpineJS", "DigitalOcean"],
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia dolorum corporis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia.",
   },
   {
-    title: "Data for District and Constituency Dashboards",
+    title: "Superset Complaints Dashboard For Ahmedabad Smart City",
+    link: "https://supersetv2.civicdatalab.in/superset/dashboard/weekly-complaints/?utm_source=tauseefsshah.com",
+    organisation: "CivicDataLab",
+    stack: ["Python", "Postgres", "Apache Superset", "Pandas", "AWS"],
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia dolorum corporis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia.",
+  },
+  {
+    title: "Government Schemes Open Sourced Data At District and Constituency Levels In India",
     link: "https://openbudgetsindia.org/?utm_source=tauseefsshah.com",
     organisation: "CiviDataLab",
-    stack: ["Laravel", "React", "InertiaJS", "TailwindCSS", "AWS"],
+    stack: ["Python", "Selenium", "Pandas", "CKAN", "React", "AWS"],
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia dolorum corporis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia.",
   },
   {
-    title: "UI Fix For Wordspress Site",
-    link: "https://opencity.in?utm_source=tauseefsshah.com",
+    title: "Open Sourced Data For Urban Cities In India",
+    link: "https://opencity.in/?utm_source=tauseefsshah.com",
     organisation: "CivicDataLab",
-    stack: ["Laravel", "React", "InertiaJS", "TailwindCSS", "AWS"],
+    stack: ["Wordpress", "MySQL", "Bootstrap", "AWS"],
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia dolorum corporis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia.",
   },
   {
-    title: "API Development and Admin Panel",
-    link: "https://orchardly.co?utm_source=tauseefsshah.com",
-    organisation: "Orchardly",
-    stack: ["Laravel", "React", "InertiaJS", "TailwindCSS", "AWS"],
+    title: "Wedding Cards Portfolio",
+    link: "https://weddings.imprintskashmir.in/?utm_source=tauseefsshah.com",
+    organisation: "Imprints",
+    stack: ["React", "NextJS", "TailwindCSS", "Vercel"],
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia dolorum corporis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia.",
+  },
+  {
+    title: "Digital Printing Online Store",
+    link: "https://shop.sheengraphics.com/?utm_source=tauseefsshah.com",
+    organisation: "Sheen Graphics",
+    stack: ["Wordpress", "MySQL", "DigitalOcean"],
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia dolorum corporis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia.",
+  },
+  {
+    title: "Orchard Management Solutions",
+    link: "https://orchardly.co/?utm_source=tauseefsshah.com",
+    organisation: "Orchardly",
+    stack: ["Laravel", "MySQL", "Livewire", "TailwindCSS"],
+    description:
+      "API Development and Admin Panel",
   },
   {
     title: "Event Management Platform",
     link: "",
     organisation: "Cybercrew - DPS Srinagar",
-    stack: ["Laravel", "React", "InertiaJS", "TailwindCSS", "AWS"],
+    stack: ["Codeignitor", "MySQL", "Bootstrap", "AWS"],
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia dolorum corporis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia.",
   },
