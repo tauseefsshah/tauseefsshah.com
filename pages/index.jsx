@@ -5,19 +5,12 @@ export default function Home() {
   return (
     <section id="masthead" className="content-box flex flex-col gap-8">
       <div className="flex flex-col gap-8">
-        <div className="flex justify-between items-center uppercase text-xs">
-          <p>Full Stack Engineer</p>
-          <p className="bg-green-500/20 px-2 py-1 rounded-xl">
-            Available For Hire
-          </p>
-        </div>
         <div className="flex gap-8 justify-between items-center flex-col lg:flex-row">
           <div className="flex flex-col gap-8 flex-1">
-            <h2 className="text-2xl">Hi! I&apos;m Tauseef Shah</h2>
-            <h3 className="text-justify">
-              I&apos;m a full stack engineer who loves building awesome
-              beautiful web applications. I love building these web application
-              with Laravel, TailwindCSS and React.
+            <h2 className="text-4xl">Hi! I&apos;m Tauseef Shah</h2>
+            <h3 className="text-xl text-white/50">
+              Full-stack engineer who loves building things, from simple tools
+              to complex web applications.
             </h3>
             <div className="flex gap-4 text-sm uppercase">
               <Link
