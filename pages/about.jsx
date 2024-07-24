@@ -30,8 +30,8 @@ const technologyStack = [
     ],
   },
   {
-    title: "Server",
-    technologies: ["AWS", "Digital Ocean", "Ubuntu", "Nginx", "Apache"],
+    title: "Data Science",
+    technologies: ["Python", "NumPy", "Pandas", "Selenium", "Apache Superset"],
   },
   {
     title: "Integrations",
@@ -48,14 +48,41 @@ const technologyStack = [
     ],
   },
   {
+    title: "Server",
+    technologies: ["AWS", "Digital Ocean", "Ubuntu", "Nginx", "Apache"],
+  },
+  {
     title: "Designing",
     technologies: ["Corel Draw", "Canva", "Corel PhotoPaint"],
   },
+];
+
+const currentSetup = [
   {
-    title: "Data Science",
-    technologies: ["Python", "NumPy", "Pandas", "Selenium", "Apache Superset"],
+    title: "Hardware",
+    technologies: [
+      "Macbook Air M2",
+      "OnePlus 9R",
+      "MSI Monitor",
+      "Logitech Wireless Keyboard & Mouse",
+      "Honeywell Lightning Dock",
+    ],
+  },
+  {
+    title: "Software",
+    technologies: [
+      "VS Code",
+      "Herd",
+      "Table Plus",
+      "DBnging",
+      "iTerm2",
+      "Clouflare Wrap",
+      "Google Keep",
+      "Google Todo",
+    ],
   },
 ];
+
 export default function About() {
   return (
     <div className="flex flex-col gap-8">
@@ -66,7 +93,7 @@ export default function About() {
           <h3 className="text-xl font-bold uppercase underline underline-offset-8">
             Technology Stack
           </h3>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {technologyStack.map((stack, index) => (
               <div
                 key={index}
@@ -91,9 +118,12 @@ export default function About() {
           <h3 className="text-xl font-bold uppercase underline underline-offset-8">
             Current Setup
           </h3>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {technologyStack.map((stack, index) => (
-              <div key={index} className="border-0 border-l-2 border-gray-300 pl-2">
+          <div className="grid grid-cols-1 gap-8">
+            {currentSetup.map((stack, index) => (
+              <div
+                key={index}
+                className="border-0 border-l-2 border-gray-300 pl-2"
+              >
                 <h4 className="font-bold uppercase mb-2">{stack.title}</h4>
                 <ul className="flex gap-2 text-xs uppercase flex-wrap">
                   {stack.technologies.sort().map((el, index) => (

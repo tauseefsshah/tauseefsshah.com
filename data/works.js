@@ -16,6 +16,14 @@ const works = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia dolorum corporis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia.",
   },
   {
+    title: "NFT For All Number",
+    link: "https://1toinfinity.org/?utm_source=tauseefsshah.com",
+    organisation: "Side Project",
+    stack: ["NextJS", "React", "TailwindCSS", "DigitalOcean"],
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia dolorum corporis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia.",
+  },
+  {
     title: "Government Schemes Open Sourced Data At District and Constituency Levels In India",
     link: "https://openbudgetsindia.org/?utm_source=tauseefsshah.com",
     organisation: "CiviDataLab",
