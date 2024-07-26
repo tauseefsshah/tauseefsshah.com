@@ -6,7 +6,7 @@ const technologyStack = [
     technologies: [
       "AlpineJS",
       "ReactJS",
-      "jQuery",
+      "JQuery",
       "Vanilla JS",
       "TailwindCSS",
       "Bootstrap",
@@ -14,6 +14,8 @@ const technologyStack = [
       "NPM",
       "Vite",
       "Webpack",
+      "Shadcn UI",
+      "Zod",
     ],
   },
   {
@@ -41,7 +43,6 @@ const technologyStack = [
       "Fathom Analytics",
       "Google Analytics",
       "Google Maps",
-      "Google Tag Manager",
       "Mailcoach",
       "Mailchimp",
       "Sendgrid",
@@ -63,22 +64,34 @@ const currentSetup = [
     technologies: [
       "Macbook Air M2",
       "OnePlus 9R",
-      "MSI Monitor",
-      "Logitech Wireless Keyboard & Mouse",
-      "Honeywell Lightning Dock",
+      "MSI Pro MP241x 24in Monitor",
+      "Logitech MK215 Wireless Keyboard And Mouse",
+      "Honeywell 7-in-1 Type C Dock Station",
     ],
   },
   {
-    title: "Software",
+    title: "Software and Tools",
     technologies: [
       "VS Code",
-      "Herd",
+      "Laravel Herd",
       "Table Plus",
-      "DBnging",
+      "DBngin",
       "iTerm2",
-      "Clouflare Wrap",
+      "Clouflare Warp VPN",
       "Google Keep",
       "Google Todo",
+      "Corel Draw Suite",
+      "Notion",
+      "Vyapar",
+      "Google Chrome",
+      "Safari",
+      "Ploi",
+      "Cloudflare",
+      "Namecheap",
+      "Google Workplace",
+      "Digital Ocean",
+      "Github",
+      "ChapGPT",
     ],
   },
 ];
@@ -88,7 +101,7 @@ export default function About() {
     <div className="flex flex-col gap-8">
       <PageTitle title="ℹ️ About" />
 
-      <div className="content-box">
+      <section id="technology-stack" className="content-box">
         <div className="flex flex-col gap-8">
           <h3 className="text-xl font-bold uppercase underline underline-offset-8">
             Technology Stack
@@ -111,9 +124,9 @@ export default function About() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="content-box">
+      <section id="current-setup" className="content-box">
         <div className="flex flex-col gap-8">
           <h3 className="text-xl font-bold uppercase underline underline-offset-8">
             Current Setup
@@ -136,7 +149,7 @@ export default function About() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
