@@ -1,105 +1,114 @@
+import { NextSeo } from "next-seo";
 import PageTitle from "@/components/page-title";
 
-const technologyStack = [
-  {
-    title: "Frontend",
-    technologies: [
-      "AlpineJS",
-      "ReactJS",
-      "JQuery",
-      "Vanilla JS",
-      "TailwindCSS",
-      "Bootstrap",
-      "PostCSS",
-      "NPM",
-      "Vite",
-      "Webpack",
-      "Shadcn UI",
-      "Zod",
-    ],
-  },
-  {
-    title: "Backend",
-    technologies: [
-      "Laravel",
-      "PHP",
-      "MySQL",
-      "Postgres",
-      "Redis",
-      "Wordpress",
-      "NodeJS",
-      "AdonisJS",
-    ],
-  },
-  {
-    title: "Data Science",
-    technologies: ["Python", "NumPy", "Pandas", "Selenium", "Apache Superset"],
-  },
-  {
-    title: "Integrations",
-    technologies: [
-      "Stripe",
-      "Razorpay",
-      "Fathom Analytics",
-      "Google Analytics",
-      "Google Maps",
-      "Mailcoach",
-      "Mailchimp",
-      "Sendgrid",
-    ],
-  },
-  {
-    title: "Server",
-    technologies: ["AWS", "Digital Ocean", "Ubuntu", "Nginx", "Apache"],
-  },
-  {
-    title: "Designing",
-    technologies: ["Corel Draw", "Canva", "Corel PhotoPaint"],
-  },
-];
-
-const currentSetup = [
-  {
-    title: "Hardware",
-    technologies: [
-      "Macbook Air M2",
-      "OnePlus 9R",
-      "MSI Pro MP241x 24in Monitor",
-      "Logitech MK215 Wireless Keyboard And Mouse",
-      "Honeywell 7-in-1 Type C Dock Station",
-    ],
-  },
-  {
-    title: "Software and Tools",
-    technologies: [
-      "VS Code",
-      "Laravel Herd",
-      "Table Plus",
-      "DBngin",
-      "iTerm2",
-      "Clouflare Warp VPN",
-      "Google Keep",
-      "Google Todo",
-      "Corel Draw Suite",
-      "Notion",
-      "Vyapar",
-      "Google Chrome",
-      "Safari",
-      "Ploi",
-      "Cloudflare",
-      "Namecheap",
-      "Google Workplace",
-      "Digital Ocean",
-      "Github",
-      "ChapGPT",
-    ],
-  },
-];
-
 export default function About() {
+  const technologyStack = [
+    {
+      title: "Frontend",
+      technologies: [
+        "AlpineJS",
+        "ReactJS",
+        "JQuery",
+        "Vanilla JS",
+        "TailwindCSS",
+        "Bootstrap",
+        "PostCSS",
+        "NPM",
+        "Vite",
+        "Webpack",
+        "Shadcn UI",
+        "Zod",
+      ],
+    },
+    {
+      title: "Backend",
+      technologies: [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "Postgres",
+        "Redis",
+        "Wordpress",
+        "NodeJS",
+        "AdonisJS",
+      ],
+    },
+    {
+      title: "Data Science",
+      technologies: [
+        "Python",
+        "NumPy",
+        "Pandas",
+        "Selenium",
+        "Apache Superset",
+      ],
+    },
+    {
+      title: "Integrations",
+      technologies: [
+        "Stripe",
+        "Razorpay",
+        "Fathom Analytics",
+        "Google Analytics",
+        "Google Maps",
+        "Mailcoach",
+        "Mailchimp",
+        "Sendgrid",
+      ],
+    },
+    {
+      title: "Server",
+      technologies: ["AWS", "Digital Ocean", "Ubuntu", "Nginx", "Apache"],
+    },
+    {
+      title: "Designing",
+      technologies: ["Corel Draw", "Canva", "Corel PhotoPaint"],
+    },
+  ];
+
+  const currentSetup = [
+    {
+      title: "Hardware",
+      technologies: [
+        "Macbook Air M2",
+        "OnePlus 9R",
+        "MSI Pro MP241x 24in Monitor",
+        "Logitech MK215 Wireless Keyboard And Mouse",
+        "Honeywell 7-in-1 Type C Dock Station",
+      ],
+    },
+    {
+      title: "Software and Tools",
+      technologies: [
+        "VS Code",
+        "Laravel Herd",
+        "Table Plus",
+        "DBngin",
+        "iTerm2",
+        "Clouflare Warp VPN",
+        "Google Keep",
+        "Google Todo",
+        "Corel Draw Suite",
+        "Notion",
+        "Vyapar",
+        "Google Chrome",
+        "Safari",
+        "Ploi",
+        "Cloudflare",
+        "Namecheap",
+        "Google Workplace",
+        "Digital Ocean",
+        "Github",
+        "ChapGPT",
+      ],
+    },
+  ];
+
   return (
     <div className="flex flex-col gap-8">
       <PageTitle title="ℹ️ About" />
+
+      <NextSeo title="About - Tauseef Shah" />
 
       <section id="technology-stack" className="content-box">
         <div className="flex flex-col gap-8">
