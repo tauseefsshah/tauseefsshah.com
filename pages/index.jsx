@@ -19,15 +19,16 @@ export default function Home() {
               <div className="flex gap-4 text-sm uppercase">
                 <Link
                   className="flex items-center bg-primary hover:bg-primary-background transition-all p-2 rounded-lg"
-                  href="/"
+                  href="mailto:hello@tauseefsshah.com"
+                  target="_blank"
                 >
-                  CTA CTA 1
+                  Say Hello 👋
                 </Link>
                 <Link
                   className="flex-items-center border-primary border-2 hover:bg-primary-background hover:border-primary-background  p-2 rounded-lg"
-                  href="/"
+                  href="/work"
                 >
-                  CTA CTA 2
+                  My Work 🧪
                 </Link>
               </div>
             </div>
