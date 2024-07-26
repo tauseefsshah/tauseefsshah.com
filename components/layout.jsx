@@ -8,19 +8,32 @@ import {
   SiTelegram,
   SiLinkedin,
 } from "@icons-pack/react-simple-icons";
+import { NextSeo } from "next-seo";
+import Head from "next/head";
+import Image from "next/image";
 
 export default function Layout({ children }) {
   const pathname = usePathname();
 
   return (
     <>
+      <Head>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+      </Head>
+      <NextSeo description="Tauseef Shah is a full stack engineer" />
+
       <header className="content-box my-8">
         <div className="flex justify-between items-center">
           <div
             id="logo"
             className="bg-white text-black rounded-full p-2 font-bold"
           >
-            TS
+            <Image
+              src="/logo.svg"
+              height={25}
+              width={25}
+              alt="Tauseef Shah Logo"
+            />
           </div>
           <nav id="logo">
             <ul className="flex gap-4">
@@ -44,17 +57,21 @@ export default function Layout({ children }) {
                   active: "work" === pathname,
                 },
               ].map((navigationItem) => (
-                <Link key={navigationItem.title} href={navigationItem.link}>
-                  <li
+                <li
+                  key={navigationItem.title}
+                  className={
+                    "p-2 rounded-full hover:bg-primary" +
+                    (navigationItem.link === pathname ? " bg-primary" : "")
+                  }
+                >
+                  <Link
+                    href={navigationItem.link}
                     title={navigationItem.title}
-                    className={
-                      "p-2 rounded-full hover:bg-primary" +
-                      (navigationItem.link === pathname ? " bg-primary" : "")
-                    }
+                    aria-label={navigationItem.title}
                   >
                     {navigationItem.icon}
-                  </li>
-                </Link>
+                  </Link>
+                </li>
               ))}
             </ul>
           </nav>
@@ -65,7 +82,7 @@ export default function Layout({ children }) {
                 ("/contact" === pathname ? " bg-primary" : "")
               }
             >
-              <Link href="/contact">
+              <Link href="/contact" title="Contact" aria-label="Contact">
                 <Inbox className="h-5 w-5" />
               </Link>
             </div>

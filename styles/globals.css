@@ -35,5 +35,5 @@ body {
 }
 
 a:hover {
-  @apply underline underline-offset-4;
+  @apply underline underline-offset-8;
 }
