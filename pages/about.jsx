@@ -75,12 +75,14 @@ export default function About() {
         "MSI Pro MP241x 24in Monitor",
         "Logitech MK215 Wireless Keyboard And Mouse",
         "Honeywell 7-in-1 Type C Dock Station",
+        "Sennheiser SCWH14 Headset",
       ],
     },
     {
       title: "Software and Tools",
       technologies: [
         "VS Code",
+        "Tmux",
         "Laravel Herd",
         "Table Plus",
         "DBngin",
