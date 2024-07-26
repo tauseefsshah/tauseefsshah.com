@@ -5,7 +5,7 @@ const works = [
     organisation: "Flynterest",
     stack: ["Laravel", "MySQL", "React", "TailwindCSS", "InertiaJS", "AlpineJS", "DigitalOcean"],
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia dolorum corporis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia.",
+      "Web based flight inventory management application called Flynterest Manager which is used by travel agents to manage their pre purchased flight inventory. The same inventory is aggreagated and distributed through Flynterest Marketplace.",
   },
   {
     title: "Superset Complaints Dashboard For Ahmedabad Smart City",
@@ -13,7 +13,7 @@ const works = [
     organisation: "CivicDataLab",
     stack: ["Python", "Postgres", "Apache Superset", "Pandas", "AWS"],
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia dolorum corporis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia.",
+      "Apache superset based dashboard to show complaints data for grievances registered in the Ahmedabad Smart City. The dashboard is used by the Ahmedabad Municipal Corportation to generate actionable insights.",
   },
   {
     title: "NFT For All Number",
@@ -21,7 +21,7 @@ const works = [
     organisation: "Side Project",
     stack: ["NextJS", "React", "TailwindCSS", "DigitalOcean"],
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia dolorum corporis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia.",
+      "Solana network based weekly generated NFT's for all the numbers.",
   },
   {
     title: "Government Schemes Open Sourced Data At District and Constituency Levels In India",
@@ -29,7 +29,7 @@ const works = [
     organisation: "CiviDataLab",
     stack: ["Python", "Selenium", "Pandas", "CKAN", "React", "AWS"],
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia dolorum corporis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia.",
+      "Data scraping and ETL for district and constituency level data for different schemes operated by state and central governments in India for multiple fiscal years.",
   },
   {
     title: "Open Sourced Data For Urban Cities In India",
@@ -37,7 +37,7 @@ const works = [
     organisation: "CivicDataLab",
     stack: ["Wordpress", "MySQL", "Bootstrap", "AWS"],
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia dolorum corporis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia.",
+      "Code cleanup, UI fixes and PHP & wordpress upgrades for the legacy wordpress website for OpenCity India where open sourced datasets from multiple Indian urban cities are hosted.",
   },
   {
     title: "Wedding Cards Portfolio",
@@ -45,15 +45,15 @@ const works = [
     organisation: "Imprints",
     stack: ["React", "NextJS", "TailwindCSS", "Vercel"],
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia dolorum corporis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia.",
+      "Wedding potfolio website for a digital printing and wedding studio. The website uses google sheets as a db to retrive the porfolio wedding cards.",
   },
   {
     title: "Digital Printing Online Store",
     link: "https://shop.sheengraphics.com/?utm_source=tauseefsshah.com",
     organisation: "Sheen Graphics",
-    stack: ["Wordpress", "MySQL", "DigitalOcean"],
+    stack: ["Wordpress", "WooCommerce", "MySQL", "DigitalOcean"],
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia dolorum corporis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia.",
+      "Wordpress based ecommerce store for a digital printing and solutions brand. Uses WooCommerce for inventory management and sale.",
   },
   {
     title: "Orchard Management Solutions",
@@ -61,7 +61,7 @@ const works = [
     organisation: "Orchardly",
     stack: ["Laravel", "MySQL", "Livewire", "TailwindCSS"],
     description:
-      "API Development and Admin Panel",
+      "Developed backend API's for mobile app use. The functionality included authentication, weather data ETL and analysis, orchard management modules and accounting module.",
   },
   {
     title: "Event Management Platform",
@@ -69,7 +69,7 @@ const works = [
     organisation: "Cybercrew - DPS Srinagar",
     stack: ["Codeignitor", "MySQL", "Bootstrap", "AWS"],
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia dolorum corporis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias amet modi cum reiciendis illo ducimus dolor a officia.",
+      "Maintained and upgraded a legacy customised event managment web application used for J&K's largest tech workshop for students.",
   },
 ];
 
