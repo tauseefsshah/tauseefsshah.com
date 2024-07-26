@@ -34,8 +34,10 @@ export default function Home() {
             <div className="flex-1">
               <Image
                 src="/tauseef-shah.jpg"
-                className="h-auto w-full max-w-60 rounded-full lg:ml-auto"
+                className="rounded-full lg:ml-auto"
                 alt="Tauseef Shah"
+                width={250}
+                height={250}
                 priority
               />
             </div>
