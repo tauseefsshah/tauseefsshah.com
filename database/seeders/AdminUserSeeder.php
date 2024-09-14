@@ -17,7 +17,7 @@ class AdminUserSeeder extends Seeder
             'name' => 'Tauseef Shah',
             'email' => 'ts@tauseefsshah.com',
             'password' => \bcrypt(
-                'local' === env('APP_ENV')
+                'production' !== env('APP_ENV')
                     ? 'ThisPasswordIsStrongForSure@1234567890'
                     : Str::random()
             ),
