@@ -16,8 +16,11 @@ class AdminUserSeeder extends Seeder
         User::create([
             'name' => 'Tauseef Shah',
             'email' => 'ts@tauseefsshah.com',
-            'password' => \bcrypt(Str::random()),
-            'verified_at' => \now(),
+            'password' => \bcrypt(
+                'local' === env('APP_ENV')
+                    ? 'ThisPasswordIsStrongForSure@1234567890'
+                    : Str::random()
+            ),
         ]);
     }
 }
