@@ -10,7 +10,7 @@ import {
 } from "@icons-pack/react-simple-icons";
 
 export default function Layout({ children }) {
-  const pathname = "/";
+  const currentRoute = route().current();
 
   return (
     <>
@@ -37,27 +37,27 @@ export default function Layout({ children }) {
                 {
                   title: "Home",
                   icon: <Home className="h-5 w-5" />,
-                  link: "/",
-                  active: "/" === pathname,
+                  link: route("front.home"),
+                  active: "front.home" === currentRoute,
                 },
                 {
                   title: "About",
                   icon: <UserCircle className="h-5 w-5" />,
-                  link: "/about",
-                  active: "about" === pathname,
+                  link: route("front.about"),
+                  active: "front.about" === currentRoute,
                 },
                 {
                   title: "Projects",
                   icon: <AppWindowMac className="h-5 w-5" />,
-                  link: "/work",
-                  active: "work" === pathname,
+                  link: route("front.work"),
+                  active: "front.work" === currentRoute,
                 },
               ].map((navigationItem) => (
                 <li
                   key={navigationItem.title}
                   className={
                     "p-2 rounded-full hover:bg-primary" +
-                    (navigationItem.link === pathname ? " bg-primary" : "")
+                    (navigationItem.active ? " bg-primary" : "")
                   }
                 >
                   <Link
@@ -75,10 +75,10 @@ export default function Layout({ children }) {
             <div
               className={
                 "p-2 rounded-full hover:bg-primary" +
-                ("/contact" === pathname ? " bg-primary" : "")
+                ("front.contact" === currentRoute ? " bg-primary" : "")
               }
             >
-              <Link href="/contact" title="Contact" aria-label="Contact">
+              <Link href={route('front.contact')} title="Contact" aria-label="Contact">
                 <Inbox className="h-5 w-5" />
               </Link>
             </div>

@@ -39,7 +39,6 @@ export default function () {
                   alt="Tauseef Shah"
                   width={250}
                   height={250}
-                  priority
                 />
               </div>
             </div>
