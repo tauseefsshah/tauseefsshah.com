@@ -17,13 +17,13 @@ export default function () {
                   tools to complex web applications.
                 </h3>
                 <div className="flex gap-4 text-sm uppercase">
-                  <Link
+                  <a
                     className="flex items-center bg-primary hover:bg-primary-background transition-all p-2 rounded-lg"
                     href="mailto:hello@tauseefsshah.com"
                     target="_blank"
                   >
                     Say Hello 👋
-                  </Link>
+                  </a>
                   <Link
                     className="flex-items-center border-primary border-2 hover:bg-primary-background hover:border-primary-background  p-2 rounded-lg"
                     href="/work"
