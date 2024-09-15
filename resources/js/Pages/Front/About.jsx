@@ -1,5 +1,6 @@
 import Layout from "@/Layouts/Layout";
 import PageTitle from "@/Components/Front/PageTitle";
+import { Head } from "@inertiajs/react";
 
 export default function () {
   const technologyStack = [
@@ -107,66 +108,68 @@ export default function () {
   ];
 
   return (
-    <Layout>
-      <div className="flex flex-col gap-8">
-        <PageTitle title="ℹ️ About" />
-
-        <section id="technology-stack" className="content-box">
-          <div className="flex flex-col gap-8">
-            <h3 className="text-xl font-bold uppercase underline underline-offset-8">
-              Technology Stack
-            </h3>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-              {technologyStack.map((stack, index) => (
-                <div
-                  key={index}
-                  className="border-0 border-l-2 border-gray-300 pl-2"
-                >
-                  <h4 className="font-bold uppercase mb-2">{stack.title}</h4>
-                  <ul className="flex gap-2 text-xs uppercase flex-wrap">
-                    {stack.technologies.sort().map((el, index) => (
-                      <li
-                        className="px-2 py-1 bg-primary rounded-xl"
-                        key={index}
-                      >
-                        {el}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+    <>
+      <Head title="About" />
+      <Layout>
+        <div className="flex flex-col gap-8">
+          <PageTitle title="ℹ️ About" />
+          <section id="technology-stack" className="content-box">
+            <div className="flex flex-col gap-8">
+              <h3 className="text-xl font-bold uppercase underline underline-offset-8">
+                Technology Stack
+              </h3>
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                {technologyStack.map((stack, index) => (
+                  <div
+                    key={index}
+                    className="border-0 border-l-2 border-gray-300 pl-2"
+                  >
+                    <h4 className="font-bold uppercase mb-2">{stack.title}</h4>
+                    <ul className="flex gap-2 text-xs uppercase flex-wrap">
+                      {stack.technologies.sort().map((el, index) => (
+                        <li
+                          className="px-2 py-1 bg-primary rounded-xl"
+                          key={index}
+                        >
+                          {el}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section id="current-setup" className="content-box">
-          <div className="flex flex-col gap-8">
-            <h3 className="text-xl font-bold uppercase underline underline-offset-8">
-              Current Setup
-            </h3>
-            <div className="grid grid-cols-1 gap-8">
-              {currentSetup.map((stack, index) => (
-                <div
-                  key={index}
-                  className="border-0 border-l-2 border-gray-300 pl-2"
-                >
-                  <h4 className="font-bold uppercase mb-2">{stack.title}</h4>
-                  <ul className="flex gap-2 text-xs uppercase flex-wrap">
-                    {stack.technologies.sort().map((el, index) => (
-                      <li
-                        className="px-2 py-1 bg-primary rounded-xl"
-                        key={index}
-                      >
-                        {el}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+          <section id="current-setup" className="content-box">
+            <div className="flex flex-col gap-8">
+              <h3 className="text-xl font-bold uppercase underline underline-offset-8">
+                Current Setup
+              </h3>
+              <div className="grid grid-cols-1 gap-8">
+                {currentSetup.map((stack, index) => (
+                  <div
+                    key={index}
+                    className="border-0 border-l-2 border-gray-300 pl-2"
+                  >
+                    <h4 className="font-bold uppercase mb-2">{stack.title}</h4>
+                    <ul className="flex gap-2 text-xs uppercase flex-wrap">
+                      {stack.technologies.sort().map((el, index) => (
+                        <li
+                          className="px-2 py-1 bg-primary rounded-xl"
+                          key={index}
+                        >
+                          {el}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
-      </div>
-    </Layout>
+          </section>
+        </div>
+      </Layout>
+    </>
   );
 }
