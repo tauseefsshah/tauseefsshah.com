@@ -1,5 +1,5 @@
 import logo from "../../svg/logo.svg";
-import { Link, Head } from "@inertiajs/react";
+import { Link } from "@inertiajs/react";
 import { AppWindowMac, Home, Inbox, UserCircle } from "lucide-react";
 import {
   SiX,
@@ -14,22 +14,13 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <Head>
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-      </Head>
-
       <header className="content-box my-8">
         <div className="flex justify-between items-center">
           <div
             id="logo"
             className="bg-white text-black rounded-full p-2 font-bold"
           >
-            <img
-              src={logo}
-              height={25}
-              width={25}
-              alt="Tauseef Shah Logo"
-            />
+            <img src={logo} height={25} width={25} alt="Tauseef Shah Logo" />
           </div>
           <nav id="logo">
             <ul className="flex gap-4">
@@ -78,7 +69,11 @@ export default function Layout({ children }) {
                 ("front.contact" === currentRoute ? " bg-primary" : "")
               }
             >
-              <Link href={route('front.contact')} title="Contact" aria-label="Contact">
+              <Link
+                href={route("front.contact")}
+                title="Contact"
+                aria-label="Contact"
+              >
                 <Inbox className="h-5 w-5" />
               </Link>
             </div>
