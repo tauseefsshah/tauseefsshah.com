@@ -1,5 +1,6 @@
 import logo from "../../svg/logo.svg";
 import { Link } from "@inertiajs/react";
+import SeoMetaTags from "@/Components/Front/SeoMetaTags";
 import { AppWindowMac, Home, Inbox, UserCircle } from "lucide-react";
 import {
   SiX,
@@ -9,11 +10,18 @@ import {
   SiLinkedin,
 } from "@icons-pack/react-simple-icons";
 
-export default function Layout({ children }) {
+export default function Layout({ children, ...props }) {
   const currentRoute = route().current();
 
   return (
     <>
+      <SeoMetaTags
+        keywords={props.keywords ?? false}
+        title={props.title ?? false}
+        description={props.description ?? false}
+        url={props.url ?? false}
+        featured-image={props.featuredImage ?? false}
+      />
       <header className="content-box my-8">
         <div className="flex justify-between items-center">
           <div
