@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --primary-background-start-rgb: 214, 219, 220;
+  --primary-background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --primary-background-start-rgb: 0, 0, 0;
+    --primary-background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+* {
+  font-family: Rubik, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  @apply body-container bg-primary-background text-white;
+}
+
+.body-container {
+  @apply container mx-auto max-w-4xl px-4 xl:px-0;
+}
+
+.content-box {
+  @apply bg-primary-muted rounded-lg p-4;
+}
+
+a:hover {
+  @apply underline underline-offset-8;
+}
