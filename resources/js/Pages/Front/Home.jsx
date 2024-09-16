@@ -6,7 +6,7 @@ export default function () {
   return (
     <>
       <Head title="Home" />
-      <Layout>
+      <Layout title="Home - Tauseef Shah">
         <section id="masthead" className="content-box flex flex-col gap-8">
           <div className="flex flex-col gap-8">
             <div className="flex gap-8 justify-between items-center flex-col lg:flex-row">

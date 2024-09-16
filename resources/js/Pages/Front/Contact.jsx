@@ -6,7 +6,7 @@ export default function () {
   return (
     <>
       <Head title="Contact" />
-      <Layout>
+      <Layout title="Contact - Tauseef Shah">
         <div className="flex flex-col gap-8">
           <PageTitle title="👋 Contact" />
           <section id="contact">

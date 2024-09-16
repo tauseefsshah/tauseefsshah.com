@@ -110,7 +110,7 @@ export default function () {
   return (
     <>
       <Head title="About" />
-      <Layout>
+      <Layout title="About - Tauseef Shah">
         <div className="flex flex-col gap-8">
           <PageTitle title="ℹ️ About" />
           <section id="technology-stack" className="content-box">

@@ -91,7 +91,7 @@ export default function () {
   return (
     <>
       <Head title="Work" />
-      <Layout>
+      <Layout title="Work - Tauseef Shah">
         <div className="flex flex-col gap-8">
           <PageTitle title="🧪 Work" />
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
