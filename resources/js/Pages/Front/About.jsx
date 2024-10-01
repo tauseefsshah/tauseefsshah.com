@@ -22,7 +22,7 @@ export default function () {
       ],
     },
     {
-      title: "Backend",
+      title: "Backend & CMS",
       technologies: [
         "Laravel",
         "PHP",
@@ -30,6 +30,7 @@ export default function () {
         "Postgres",
         "Redis",
         "Wordpress",
+        "Wix",
         "NodeJS",
         "AdonisJS",
       ],
@@ -72,6 +73,7 @@ export default function () {
       title: "Hardware",
       technologies: [
         "Macbook Air M2",
+        "Iphone 15",
         "OnePlus 9R",
         "MSI Pro MP241x 24in Monitor",
         "Logitech MK215 Wireless Keyboard And Mouse",
@@ -102,7 +104,6 @@ export default function () {
         "Google Workplace",
         "Digital Ocean",
         "Github",
-        "ChapGPT",
       ],
     },
   ];

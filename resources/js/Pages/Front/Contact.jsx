@@ -36,7 +36,7 @@ export default function () {
                 <Link
                   key={index}
                   href={app.link}
-                  className="text-6xl uppercase font-bold"
+                  className="text-5xl uppercase font-bold lg:text-6xl"
                   target="_blank"
                 >
                   {app.name}

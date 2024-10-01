@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "@icons-pack/react-simple-icons": "^10.0.0",
-        "lucide-react": "^0.441.0"
+        "lucide-react": "^0.441.0",
+        "typed.js": "^2.1.0"
     }
 }
