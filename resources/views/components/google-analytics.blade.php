@@ -1,5 +1,5 @@
 @production
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ env('GA_MEASUREMENT_IDGA_MEASUREMENT_ID') }}"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ env('GA_MEASUREMENT_ID') }}"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -8,6 +8,6 @@
     }
     gtag('js', new Date());
 
-    gtag('config', '{{ env("GA_MEASUREMENT_IDGA_MEASUREMENT_ID") }}');
+    gtag('config', '{{ env("GA_MEASUREMENT_ID") }}');
 </script>
 @endproduction
