@@ -101,13 +101,13 @@ export default function () {
                   <h3 className="text-lg font-bold uppercase">
                     {project.title}
                   </h3>
-                  <ul className="flex gap-2 text-xs uppercase flex-wrap">
-                    <li className="px-2 py-1 bg-white text-primary rounded-xl font-bold">
+                  <ul className="flex flex-wrap gap-2 text-xs uppercase">
+                    <li className="rounded-xl bg-white px-2 py-1 font-bold text-primary">
                       {"" === project.link ? (
                         project.organisation
                       ) : (
                         <a
-                          className="flex gap-1 items-center"
+                          className="flex items-center gap-1"
                           href={project.link}
                           target="_blank"
                         >
@@ -119,7 +119,7 @@ export default function () {
                     {project.stack.map((stack, stackIndex) => (
                       <li
                         key={stackIndex}
-                        className="px-2 py-1 bg-primary rounded-xl"
+                        className="rounded-xl bg-primary px-2 py-1"
                       >
                         {stack}
                       </li>

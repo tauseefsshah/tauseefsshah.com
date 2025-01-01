@@ -23,10 +23,10 @@ export default function Layout({ children, ...props }) {
         featured-image={props.featuredImage ?? false}
       />
       <header className="content-box my-8">
-        <div className="flex justify-between items-center">
+        <div className="flex items-center justify-between">
           <div
             id="logo"
-            className="bg-white text-black rounded-full p-2 font-bold"
+            className="rounded-full bg-white p-2 font-bold text-black"
           >
             <img src={logo} height={25} width={25} alt="Tauseef Shah Logo" />
           </div>
@@ -55,7 +55,7 @@ export default function Layout({ children, ...props }) {
                 <li
                   key={navigationItem.title}
                   className={
-                    "p-2 rounded-full hover:bg-primary" +
+                    "rounded-full p-2 hover:bg-primary" +
                     (navigationItem.active ? " bg-primary" : "")
                   }
                 >
@@ -73,7 +73,7 @@ export default function Layout({ children, ...props }) {
           <div id="cta">
             <div
               className={
-                "p-2 rounded-full hover:bg-primary" +
+                "rounded-full p-2 hover:bg-primary" +
                 ("front.contact" === currentRoute ? " bg-primary" : "")
               }
             >
@@ -92,7 +92,7 @@ export default function Layout({ children, ...props }) {
       <main>{children}</main>
 
       <footer className="content-box my-8">
-        <div className="flex flex-col gap-4 items-center">
+        <div className="flex flex-col items-center gap-4">
           <div className="flex gap-4">
             {[
               {

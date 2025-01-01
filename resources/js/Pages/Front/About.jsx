@@ -125,11 +125,11 @@ export default function () {
                     key={index}
                     className="border-0 border-l-2 border-gray-300 pl-2"
                   >
-                    <h4 className="font-bold uppercase mb-2">{stack.title}</h4>
-                    <ul className="flex gap-2 text-xs uppercase flex-wrap">
+                    <h4 className="mb-2 font-bold uppercase">{stack.title}</h4>
+                    <ul className="flex flex-wrap gap-2 text-xs uppercase">
                       {stack.technologies.sort().map((el, index) => (
                         <li
-                          className="px-2 py-1 bg-primary rounded-xl"
+                          className="rounded-xl bg-primary px-2 py-1"
                           key={index}
                         >
                           {el}
@@ -153,11 +153,11 @@ export default function () {
                     key={index}
                     className="border-0 border-l-2 border-gray-300 pl-2"
                   >
-                    <h4 className="font-bold uppercase mb-2">{stack.title}</h4>
-                    <ul className="flex gap-2 text-xs uppercase flex-wrap">
+                    <h4 className="mb-2 font-bold uppercase">{stack.title}</h4>
+                    <ul className="flex flex-wrap gap-2 text-xs uppercase">
                       {stack.technologies.sort().map((el, index) => (
                         <li
-                          className="px-2 py-1 bg-primary rounded-xl"
+                          className="rounded-xl bg-primary px-2 py-1"
                           key={index}
                         >
                           {el}

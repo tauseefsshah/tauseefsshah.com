@@ -1,7 +1,7 @@
 export default function ({ title }) {
   return (
     <h1 className="text-xl font-bold">
-      <span className="bg-white text-primary p-2 uppercase -rotate-2 inline-block">
+      <span className="inline-block -rotate-2 bg-white p-2 uppercase text-primary">
         {title}
       </span>
     </h1>
