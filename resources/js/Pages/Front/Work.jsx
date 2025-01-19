@@ -119,7 +119,7 @@ export default function () {
                     {project.stack.map((stack, stackIndex) => (
                       <li
                         key={stackIndex}
-                        className="rounded-xl bg-primary px-2 py-1"
+                        className="rounded-xl bg-slate-100 px-2 py-1"
                       >
                         {stack}
                       </li>

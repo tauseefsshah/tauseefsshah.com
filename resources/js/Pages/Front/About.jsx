@@ -129,7 +129,7 @@ export default function () {
                     <ul className="flex flex-wrap gap-2 text-xs uppercase">
                       {stack.technologies.sort().map((el, index) => (
                         <li
-                          className="rounded-xl bg-primary px-2 py-1"
+                          className="rounded-xl bg-slate-100 px-2 py-1"
                           key={index}
                         >
                           {el}
@@ -157,7 +157,7 @@ export default function () {
                     <ul className="flex flex-wrap gap-2 text-xs uppercase">
                       {stack.technologies.sort().map((el, index) => (
                         <li
-                          className="rounded-xl bg-primary px-2 py-1"
+                          className="rounded-xl bg-slate-100 px-2 py-1"
                           key={index}
                         >
                           {el}

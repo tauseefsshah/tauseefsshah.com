@@ -40,14 +40,14 @@ export default function Layout({ children, ...props }) {
                   active: "front.about" === currentRoute,
                 },
                 {
-                  title: "Projects",
-                  link: route("front.work"),
-                  active: "front.work" === currentRoute,
+                  title: "Blog",
+                  link: route("front.about"),
+                  active: "front.about" === currentRoute,
                 },
                 {
-                  title: "Contact",
-                  link: route("front.contact"),
-                  active: "front.contact" === currentRoute,
+                  title: "Work",
+                  link: route("front.work"),
+                  active: "front.work" === currentRoute,
                 },
               ].map((navigationItem) => (
                 <li
