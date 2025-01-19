@@ -1,7 +1,6 @@
 import logo from "../../svg/logo.svg";
 import { Link } from "@inertiajs/react";
 import SeoMetaTags from "@/Components/Front/SeoMetaTags";
-import { AppWindowMac, Home, Inbox, UserCircle } from "lucide-react";
 import {
   SiX,
   SiGithub,
@@ -22,70 +21,55 @@ export default function Layout({ children, ...props }) {
         url={props.url ?? false}
         featured-image={props.featuredImage ?? false}
       />
-      <header className="content-box my-8">
+      <header className="py-4">
         <div className="flex items-center justify-between">
           <div
             id="logo"
             className="rounded-full bg-white p-2 font-bold text-black"
           >
-            <img src={logo} height={25} width={25} alt="Tauseef Shah Logo" />
+            <Link href="/">
+              <img src={logo} height={25} width={25} alt="Tauseef Shah Logo" />
+            </Link>
           </div>
-          <nav id="logo">
-            <ul className="flex gap-4">
+          <nav id="navigation">
+            <ul className="flex gap-8">
               {[
                 {
-                  title: "Home",
-                  icon: <Home className="h-5 w-5" />,
-                  link: route("front.home"),
-                  active: "front.home" === currentRoute,
-                },
-                {
                   title: "About",
-                  icon: <UserCircle className="h-5 w-5" />,
                   link: route("front.about"),
                   active: "front.about" === currentRoute,
                 },
                 {
                   title: "Projects",
-                  icon: <AppWindowMac className="h-5 w-5" />,
                   link: route("front.work"),
                   active: "front.work" === currentRoute,
+                },
+                {
+                  title: "Contact",
+                  link: route("front.contact"),
+                  active: "front.contact" === currentRoute,
                 },
               ].map((navigationItem) => (
                 <li
                   key={navigationItem.title}
                   className={
-                    "rounded-full p-2 hover:bg-primary" +
-                    (navigationItem.active ? " bg-primary" : "")
+                    navigationItem.active
+                      ? "text-primary underline underline-offset-8 decoration-2"
+                      : "text-primary-background"
                   }
                 >
                   <Link
                     href={navigationItem.link}
                     title={navigationItem.title}
                     aria-label={navigationItem.title}
+                    className=""
                   >
-                    {navigationItem.icon}
+                    {navigationItem.title}
                   </Link>
                 </li>
               ))}
             </ul>
           </nav>
-          <div id="cta">
-            <div
-              className={
-                "rounded-full p-2 hover:bg-primary" +
-                ("front.contact" === currentRoute ? " bg-primary" : "")
-              }
-            >
-              <Link
-                href={route("front.contact")}
-                title="Contact"
-                aria-label="Contact"
-              >
-                <Inbox className="h-5 w-5" />
-              </Link>
-            </div>
-          </div>
         </div>
       </header>
 
