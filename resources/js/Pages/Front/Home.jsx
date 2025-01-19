@@ -20,19 +20,25 @@ export default function () {
             Full Stack Engineer | Build, Ship, Repeat
           </p>
           <p className="text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-            neque autem saepe quia ab magnam, doloribus deserunt. Sapiente, iste
-            nulla! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Suscipit ipsum facilis quis temporibus ut laudantium consequatur
-            esse, voluptate dolorum blanditiis?
+            I am a full stack engineer who loves to build and ship software.
+            Currently in Bengaluru, I am trying to connect the dots, find
+            meaning to life and build something remarkable. Apart from software,
+            aviation, accounting, business, mathematics, and science interests
+            and fascinates me.
+          </p>
+          <p className="text-lg">
+            I am a full stack engineer who loves to build and ship software.
+            Currently in Bengaluru, I am trying to connect the dots, find
+            meaning to life and build something remarkable. Apart from software,
+            aviation, mathematics, accounting and science interests and
+            fascinates me.
           </p>
           <div className="flex gap-4 text-sm uppercase">
             <Link
               className="flex-items-center rounded-lg border-2 border-primary p-2 hover:bg-slate-100 hover:no-underline"
-              href="mailto:hello@tauseefsshah.com"
-              target="_blank"
+              href="/work"
             >
-              Say Hello 👋
+              Know More ℹ️
             </Link>
             <Link
               className="flex-items-center rounded-lg border-2 border-primary p-2 hover:bg-slate-100 hover:no-underline"
@@ -42,9 +48,10 @@ export default function () {
             </Link>
             <Link
               className="flex-items-center rounded-lg border-2 border-primary p-2 hover:bg-slate-100 hover:no-underline"
-              href="/work"
+              href="mailto:hello@tauseefsshah.com"
+              target="_blank"
             >
-              Know More ℹ️
+              Say Hello 👋
             </Link>
           </div>
         </section>
