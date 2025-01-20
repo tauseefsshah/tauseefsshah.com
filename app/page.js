@@ -1,14 +1,14 @@
-import TauseefShahProfilePhoto from "../public/tauseef-shah.jpg";
-import { ArrowUpRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+
+import { ArrowUpRight } from "lucide-react";
 
 export default function Home() {
   return (
     <main className="space-y-40 py-20">
       <section id="masthead" className="space-y-8">
         <Image
-          src={TauseefShahProfilePhoto}
+          src="/tauseef-shah.jpg"
           className="rounded-full"
           alt="Tauseef Shah"
           width={200}
