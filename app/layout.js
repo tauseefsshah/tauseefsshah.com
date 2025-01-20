@@ -3,7 +3,7 @@ import Logo from "../public/logo.svg";
 
 import Link from "next/link";
 import Image from "next/image";
-import { Outfit } from "@next/font/google";
+import { Outfit } from "next/font/google";
 
 import { ArrowUpRight } from "lucide-react";
 
