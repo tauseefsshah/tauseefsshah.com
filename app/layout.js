@@ -1,5 +1,4 @@
 import "./globals.css";
-import Logo from "../public/logo.svg";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -28,7 +27,7 @@ export default function RootLayout({ children }) {
               className="rounded-full bg-white p-2 font-bold text-black"
             >
               <Link href="/">
-                <Image src={Logo} height={25} width={25} alt="Tauseef Shah" />
+                <Image src="/logo.svg" height={25} width={25} alt="Tauseef Shah" />
               </Link>
             </div>
             <nav id="navigation">
