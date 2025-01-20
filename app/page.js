@@ -24,37 +24,29 @@ export default function Home() {
           finance, accounting, business, mathematics, and science interests and
           fascinates me.
         </p>
-        <p className="text-lg">
-          I am a full stack engineer who loves to build and ship software.
-          Currently in Bengaluru, I am trying to connect the dots, find meaning
-          to life and build something remarkable. Apart from software, aviation,
-          finance, accounting, business, mathematics, and science interests and
-          fascinates me.
-        </p>
         <div className="flex gap-4 text-sm uppercase">
-          <Link
-            className="flex-items-center rounded-lg border-2 border-primary p-2 hover:bg-slate-100 hover:no-underline"
-            href="/about"
-          >
-            Know More ℹ️
-          </Link>
-          <Link
-            className="flex-items-center rounded-lg border-2 border-primary p-2 hover:bg-slate-100 hover:no-underline"
-            href="/projects"
-          >
-            Projects 🧪
-          </Link>
-          <Link
-            className="flex-items-center rounded-lg border-2 border-primary p-2 hover:bg-slate-100 hover:no-underline"
-            href="mailto:hello@tauseefsshah.com"
-            target="_blank"
-          >
-            Say Hello 👋
-          </Link>
+          {[
+            {
+              title: "Know More",
+              link: "/about",
+            },
+            {
+              title: "Say Hello",
+              link: "mailto:hello@tauseefsshah.com",
+            },
+          ].map((action, actionIndex) => (
+            <Link
+              className="flex gap-1 items-center"
+              href={action.link}
+              key={actionIndex}
+            >
+              {action.title} <ArrowUpRight className="size-4" />
+            </Link>
+          ))}
         </div>
       </section>
 
-      <section id="blog-posts">
+      {/* <section id="blog-posts">
         <h1 className="mb-8 text-4xl font-bold">Blog Posts</h1>
         <div className="space-y-8">
           {[
@@ -106,15 +98,12 @@ export default function Home() {
             </div>
           ))}
           <div>
-            <Link
-              className="flex-items-center mt-8 rounded-lg border-2 border-primary bg-primary p-2 text-white hover:bg-primary-muted hover:no-underline"
-              href="/about"
-            >
-              Read More
+            <Link className="flex gap-1 items-center" href="/about">
+              Read More <ArrowUpRight className="size-4" />
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section id="projects">
         <h1 className="mb-8 text-4xl font-bold">Projects</h1>
@@ -146,12 +135,12 @@ export default function Home() {
                 "Apache superset based dashboard to show complaints data for grievances registered in the Ahmedabad Smart City. The dashboard is used by the Ahmedabad Municipal Corportation to generate actionable insights.",
             },
             {
-              title: "Wedding Cards Portfolio",
-              link: "https://weddings.imprintskashmir.in/?utm_source=tauseefsshah.com",
-              organisation: "Imprints",
-              stack: ["React", "NextJS", "TailwindCSS", "Vercel"],
+              title: "NFT For All Number",
+              link: "https://1toinfinity.org/?utm_source=tauseefsshah.com",
+              organisation: "Side Project",
+              stack: ["NextJS", "React", "TailwindCSS", "DigitalOcean"],
               description:
-                "Wedding potfolio website for a digital printing and wedding studio. The website uses google sheets as a db to retrive the porfolio wedding cards.",
+                "Solana network based weekly generated NFT's for all the numbers.",
             },
           ].map((project, projectIndex) => (
             <div key={projectIndex} className="content-box">
@@ -188,11 +177,8 @@ export default function Home() {
             </div>
           ))}
           <div>
-            <Link
-              className="flex-items-center mt-8 rounded-lg border-2 border-primary bg-primary p-2 text-white hover:bg-primary-muted hover:no-underline"
-              href="/about"
-            >
-              Know More
+            <Link className="flex gap-1 items-center" href="/projects">
+              Know More <ArrowUpRight className="size-4" />
             </Link>
           </div>
         </div>

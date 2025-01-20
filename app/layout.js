@@ -39,11 +39,11 @@ export default function RootLayout({ children }) {
                     link: "/about",
                     active: false,
                   },
-                  {
-                    title: "Blog",
-                    link: "/blog",
-                    active: false,
-                  },
+                  // {
+                  //   title: "Blog",
+                  //   link: "/blog",
+                  //   active: false,
+                  // },
                   {
                     title: "Projects",
                     link: "/projects",
