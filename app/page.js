@@ -21,14 +21,14 @@ export default function Home() {
           I am a full stack engineer who loves to build and ship software.
           Currently in Bengaluru, I am trying to connect the dots, find meaning
           to life and build something remarkable. Apart from software, aviation,
-          accounting, business, mathematics, and science interests and
+          finance, accounting, business, mathematics, and science interests and
           fascinates me.
         </p>
         <p className="text-lg">
           I am a full stack engineer who loves to build and ship software.
           Currently in Bengaluru, I am trying to connect the dots, find meaning
           to life and build something remarkable. Apart from software, aviation,
-          accounting, business, mathematics, and science interests and
+          finance, accounting, business, mathematics, and science interests and
           fascinates me.
         </p>
         <div className="flex gap-4 text-sm uppercase">
@@ -40,9 +40,9 @@ export default function Home() {
           </Link>
           <Link
             className="flex-items-center rounded-lg border-2 border-primary p-2 hover:bg-slate-100 hover:no-underline"
-            href="/work"
+            href="/projects"
           >
-            My Work 🧪
+            Projects 🧪
           </Link>
           <Link
             className="flex-items-center rounded-lg border-2 border-primary p-2 hover:bg-slate-100 hover:no-underline"
@@ -56,7 +56,7 @@ export default function Home() {
 
       <section id="blog-posts">
         <h1 className="mb-8 text-4xl font-bold">Blog Posts</h1>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="space-y-8">
           {[
             {
               title:
@@ -116,8 +116,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="works">
-        <h1 className="mb-8 text-4xl font-bold">Works</h1>
+      <section id="projects">
+        <h1 className="mb-8 text-4xl font-bold">Projects</h1>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {[
             {

@@ -1,15 +1,11 @@
-import { Outfit } from "@next/font/google";
 import "./globals.css";
-import Link from "next/link";
-import {
-  SiDiscord,
-  SiGithub,
-  SiTelegram,
-  SiX,
-} from "@icons-pack/react-simple-icons";
-import Linkedin from "../public/linkedin.svg";
 import Logo from "../public/logo.svg";
+
+import Link from "next/link";
 import Image from "next/image";
+import { Outfit } from "@next/font/google";
+
+import { ArrowUpRight } from "lucide-react";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -49,8 +45,8 @@ export default function RootLayout({ children }) {
                     active: false,
                   },
                   {
-                    title: "Work",
-                    link: "/work",
+                    title: "Projects",
+                    link: "/projects",
                     active: false,
                   },
                 ].map((navigationItem) => (
@@ -81,34 +77,27 @@ export default function RootLayout({ children }) {
 
         <footer className="content-box my-8">
           <div className="flex flex-col items-center gap-4">
-            <div className="flex gap-4">
+            <div className="flex flex-wrap justify-center gap-4">
               {[
                 {
                   platform: "x",
                   link: "https://x.com/tauseefsshah",
-                  icon: <SiX className="h-5 w-5" />,
                 },
                 {
                   platform: "linkedin",
                   link: "https://linkedin.com/in/tauseefsshah",
-                  icon: (
-                    <Image src={Linkedin} alt="LinkedIn" className="h-5 w-5" />
-                  ),
                 },
                 {
                   platform: "github",
                   link: "https://github.com/tauseefsshah",
-                  icon: <SiGithub className="h-5 w-5" />,
                 },
                 {
                   platform: "discord",
                   link: "https://discordapp.com/users/742727242823499847",
-                  icon: <SiDiscord className="h-5 w-5" />,
                 },
                 {
                   platform: "telegram",
                   link: "https://t.me/tauseefsshah",
-                  icon: <SiTelegram className="h-5 w-5" />,
                 },
               ].map((socialMedia) => (
                 <a
@@ -116,8 +105,9 @@ export default function RootLayout({ children }) {
                   href={socialMedia.link}
                   target="_blank"
                   title={socialMedia.platform}
+                  className="flex gap-1 items-center"
                 >
-                  {socialMedia.icon}
+                  {socialMedia.platform} <ArrowUpRight className="size-4" />
                 </a>
               ))}
             </div>
