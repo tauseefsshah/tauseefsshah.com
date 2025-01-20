@@ -1,9 +1,9 @@
 name = "tauseefsshah"
 compatibility_date = "2025-01-20"
+pages_build_output_dir = "./build"
 
 [build]
 command = "npm run build"
-pages_build_output_dir = "build"
 
 [env.production]
 compatibility_flags = [ "nodejs_compat" ]
