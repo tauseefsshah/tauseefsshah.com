@@ -1,9 +1,13 @@
+import allProjects from "../data/projects.json";
+
 import Link from "next/link";
 import Image from "next/image";
 
 import { ArrowUpRight } from "lucide-react";
 
 export default function Home() {
+  const projects = allProjects.slice(0, 3);
+
   return (
     <main className="space-y-40 py-20">
       <section id="masthead" className="space-y-8">
@@ -108,41 +112,7 @@ export default function Home() {
       <section id="projects">
         <h1 className="mb-8 text-4xl font-bold">Projects</h1>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          {[
-            {
-              title:
-                "B2B Flight Inventory Management And Distribution Platform",
-              link: "https://flynterest.com/?utm_source=tauseefsshah.com",
-              organisation: "Flynterest",
-              stack: [
-                "Laravel",
-                "MySQL",
-                "React",
-                "TailwindCSS",
-                "InertiaJS",
-                "AlpineJS",
-                "DigitalOcean",
-              ],
-              description:
-                "Web based flight inventory management application called Flynterest Manager which is used by travel agents to manage their pre purchased flight inventory. The same inventory is aggreagated and distributed through Flynterest Marketplace.",
-            },
-            {
-              title: "Superset Complaints Dashboard For Ahmedabad Smart City",
-              link: "https://supersetv2.civicdatalab.in/superset/dashboard/weekly-complaints/?utm_source=tauseefsshah.com",
-              organisation: "CivicDataLab",
-              stack: ["Python", "Postgres", "Apache Superset", "Pandas", "AWS"],
-              description:
-                "Apache superset based dashboard to show complaints data for grievances registered in the Ahmedabad Smart City. The dashboard is used by the Ahmedabad Municipal Corportation to generate actionable insights.",
-            },
-            {
-              title: "NFT For All Number",
-              link: "https://1toinfinity.org/?utm_source=tauseefsshah.com",
-              organisation: "Side Project",
-              stack: ["NextJS", "React", "TailwindCSS", "DigitalOcean"],
-              description:
-                "Solana network based weekly generated NFT's for all the numbers.",
-            },
-          ].map((project, projectIndex) => (
+          {projects.map((project, projectIndex) => (
             <div key={projectIndex} className="content-box">
               <div className="flex flex-col gap-4">
                 <h3 className="text-md font-semibold uppercase">
