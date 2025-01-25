@@ -4,9 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { ArrowUpRight } from "lucide-react";
+import Project from "@/components/project";
 
 export default function Home() {
-  const projects = allProjects.slice(0, 3);
+  const projects = allProjects.slice(0, 4);
 
   return (
     <main className="space-y-40 py-20">
@@ -111,40 +112,9 @@ export default function Home() {
 
       <section id="projects">
         <h1 className="mb-8 text-4xl font-bold">Projects</h1>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {projects.map((project, projectIndex) => (
-            <div key={projectIndex} className="content-box">
-              <div className="flex flex-col gap-4">
-                <h3 className="text-md font-semibold uppercase">
-                  {project.title}
-                </h3>
-                <ul className="flex flex-wrap gap-2 text-xs uppercase">
-                  <li className="rounded-xl bg-white px-2 py-1 font-bold text-primary">
-                    {"" === project.link ? (
-                      project.organisation
-                    ) : (
-                      <a
-                        className="flex items-center gap-1"
-                        href={project.link}
-                        target="_blank"
-                      >
-                        {project.organisation}
-                        <ArrowUpRight className="h-4 w-4" />
-                      </a>
-                    )}
-                  </li>
-                  {project.stack.map((stack, stackIndex) => (
-                    <li
-                      key={stackIndex}
-                      className="rounded-xl bg-slate-100 px-2 py-1"
-                    >
-                      {stack}
-                    </li>
-                  ))}
-                </ul>
-                <p className="text-sm">{project.description}</p>
-              </div>
-            </div>
+            <Project key={projectIndex} project={project} />
           ))}
           <div>
             <Link className="flex gap-1 items-center" href="/projects">
