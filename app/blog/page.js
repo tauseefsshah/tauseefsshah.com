@@ -1,7 +1,10 @@
-export default function Blog() {
+import Blog from "@/components/blog";
+
+export default function Page() {
+
   return (
-    <main className="space-y-20 py-20">
-      <div className="text-4xl">Hello World</div>
+    <main className="py-20 max-w-screen-sm mx-auto">
+      <Blog />
     </main>
   );
 }
