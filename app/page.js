@@ -7,7 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 import Project from "@/components/project";
 import Blog from "@/components/blog";
 
-export default function Home() {
+export default function Page() {
   const projects = allProjects.slice(0, 4);
 
   return (
