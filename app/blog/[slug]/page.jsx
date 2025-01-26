@@ -31,7 +31,7 @@ export default async function Page({ params }) {
         <p className="text-xl font-semiold">{meta.date}</p>
       </div>
       <article
-        className="space-y-4"
+        className="space-y-8 text-xl text-gray-500"
         dangerouslySetInnerHTML={{
           __html: _content,
         }}

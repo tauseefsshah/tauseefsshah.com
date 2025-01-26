@@ -1,19 +1,11 @@
 ---
 date: "2025-01-26"
-title: Hello World 👋
-excerpt: This blog is wip. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, rem dolore? Labore facilis soluta earum, libero nulla ducimus dolores distinctio corrupti quia doloremque mollitia commodi ad consequatur in eligendi
+title: Hello World!
+excerpt: Is Hello Duniya a better alternative to Hello World? Personally no, so here I am with the classic old Hello World blog. This is my third blog in my 25 years on this planet and hopefully I will keep up with it.
 ---
 
-# This blog is wip
+Is "Hello Duniya" a better alternative to "Hello World"? Personally no, so here I am with the classic old "Hello World" blog. This is my third blog in my 25 years on this planet and hopefully I will keep up with it.
 
-# Lorem Ipsum Dolor
+I am Tauseef 👋, a full stack engineer who loves to build and ship software. I have been tinkering with technology since 2012 and have been professionally building cool and not-cool software since 2018.
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, rem dolore? Labore facilis soluta earum, libero nulla ducimus dolores distinctio corrupti quia doloremque mollitia commodi ad consequatur in eligendi, natus aspernatur tempore sunt ex veniam? Repudiandae optio id velit obcaecati atque sit provident, molestias veniam adipisci eos consectetur! Eos harum maiores soluta itaque doloribus. Placeat officia consequatur tempore voluptatum sapiente, debitis aut, deserunt magnam maxime hic aliquam veniam earum dicta eaque tempora enim sed minima totam officiis esse? Excepturi culpa quidem minima voluptates quisquam, facilis voluptatum, quo harum velit consequatur suscipit dolores quia iure sed fugit possimus consectetur necessitatibus incidunt.
-
-### Lorem I
-
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, rem dolore? Labore facilis soluta earum, libero nulla ducimus dolores distinctio corrupti quia doloremque mollitia commodi ad consequatur in eligendi, natus aspernatur tempore sunt ex veniam? Repudiandae optio id velit obcaecati atque sit provident, molestias veniam adipisci eos consectetur! Eos harum maiores soluta itaque doloribus. Placeat officia consequatur tempore voluptatum sapiente, debitis aut, deserunt magnam maxime hic aliquam veniam earum dicta eaque tempora enim sed minima totam officiis esse? Excepturi culpa quidem minima voluptates quisquam, facilis voluptatum, quo harum velit consequatur suscipit dolores quia iure sed fugit possimus consectetur necessitatibus incidunt.
-
-### Lorem II
-
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, rem dolore? Labore facilis soluta earum, libero nulla ducimus dolores distinctio corrupti quia doloremque mollitia commodi ad consequatur in eligendi, natus aspernatur tempore sunt ex veniam? Repudiandae optio id velit obcaecati atque sit provident, molestias veniam adipisci eos consectetur! Eos harum maiores soluta itaque doloribus. Placeat officia consequatur tempore voluptatum sapiente, debitis aut, deserunt magnam maxime hic aliquam veniam earum dicta eaque tempora enim sed minima totam officiis esse? Excepturi culpa quidem minima voluptates quisquam, facilis voluptatum, quo harum velit consequatur suscipit dolores quia iure sed fugit possimus consectetur necessitatibus incidunt.
+What should I write in this blog? Ughhh I will publish this for now and get back to complete this hahaha
