@@ -27,7 +27,12 @@ export default function RootLayout({ children }) {
               className="rounded-full bg-white p-2 font-bold text-black"
             >
               <Link href="/">
-                <Image src="/logo.svg" height={25} width={25} alt="Tauseef Shah" />
+                <Image
+                  src="/logo.svg"
+                  height={25}
+                  width={25}
+                  alt="Tauseef Shah"
+                />
               </Link>
             </div>
             <nav id="navigation">
@@ -38,11 +43,11 @@ export default function RootLayout({ children }) {
                     link: "/about",
                     active: false,
                   },
-                  // {
-                  //   title: "Blog",
-                  //   link: "/blog",
-                  //   active: false,
-                  // },
+                  {
+                    title: "Blog",
+                    link: "/blog",
+                    active: false,
+                  },
                   {
                     title: "Projects",
                     link: "/projects",
