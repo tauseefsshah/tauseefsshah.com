@@ -36,3 +36,26 @@ body {
 a:hover {
   @apply underline underline-offset-8 decoration-2;
 }
+
+#blog-content h1,
+h2,
+h3,
+h4 {
+  @apply font-semibold;
+}
+
+#blog-content h1 {
+  @apply text-4xl;
+}
+
+#blog-content h2 {
+  @apply text-2xl;
+}
+
+#blog-content h3 {
+  @apply text-xl;
+}
+
+#blog-content h4 {
+  @apply text-lg;
+}
