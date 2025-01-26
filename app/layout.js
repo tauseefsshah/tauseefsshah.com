@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Outfit } from "next/font/google";
 
 import { ArrowUpRight } from "lucide-react";
+import Navigation from "@/components/navigation";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -35,45 +36,7 @@ export default function RootLayout({ children }) {
                 />
               </Link>
             </div>
-            <nav id="navigation">
-              <ul className="flex gap-8">
-                {[
-                  {
-                    title: "About",
-                    link: "/about",
-                    active: false,
-                  },
-                  {
-                    title: "Blog",
-                    link: "/blog",
-                    active: false,
-                  },
-                  {
-                    title: "Projects",
-                    link: "/projects",
-                    active: false,
-                  },
-                ].map((navigationItem) => (
-                  <li
-                    key={navigationItem.title}
-                    className={
-                      navigationItem.active
-                        ? "text-primary underline underline-offset-8 decoration-2"
-                        : "text-primary-background"
-                    }
-                  >
-                    <Link
-                      href={navigationItem.link}
-                      title={navigationItem.title}
-                      aria-label={navigationItem.title}
-                      className=""
-                    >
-                      {navigationItem.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+            <Navigation />
           </div>
         </header>
 
