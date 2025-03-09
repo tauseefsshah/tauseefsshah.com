@@ -30,7 +30,7 @@ export default function Blog({ limit = undefined }) {
             </Link>
             <p className="font-semiold text-slate-600">{blog.meta.date}</p>
           </div>
-          <p className="text-slate-600 line-clamp-2">{blog.meta.excerpt}</p>
+          <p className="text-slate-600 line-clamp-3">{blog.meta.excerpt}</p>
         </div>
       ))}
     </div>
