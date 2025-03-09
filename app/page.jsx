@@ -72,7 +72,7 @@ export default function Page() {
           <Blog limit={3} />
 
           <div>
-            <Link className="flex gap-1 items-center" href="/about">
+            <Link className="flex gap-1 items-center" href="/blog">
               Read More <ArrowUpRight className="size-4" />
             </Link>
           </div>
