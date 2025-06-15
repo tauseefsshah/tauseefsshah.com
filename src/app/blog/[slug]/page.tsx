@@ -3,6 +3,17 @@ import path from "path";
 import { marked } from "marked";
 import matter from "gray-matter";
 
+interface PageParams {
+  params: {
+    slug: string;
+  };
+}
+
+interface BlogMeta {
+  title: string;
+  date: string;
+}
+
 export async function generateStaticParams() {
   const files = fs.readdirSync(path.join("data", "blogs"));
 
@@ -15,12 +26,12 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Page({ params }) {
-  const { slug } = await params;
+export default async function Page({ params }: PageParams) {
+  const { slug } = params;
 
-  const { data: meta, content } = matter(
-    fs.readFileSync(path.join("data", "blogs", slug + ".md"))
-  );
+  const fileContent = fs.readFileSync(path.join("data", "blogs", slug + ".md"));
+  const { data, content } = matter(fileContent);
+  const meta = data as BlogMeta;
 
   const _content = marked(content);
 
@@ -38,4 +49,4 @@ export default async function Page({ params }) {
       />
     </main>
   );
-}
+} 

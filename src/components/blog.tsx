@@ -3,12 +3,27 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-async function getBlogs() {
+interface BlogMeta {
+  title: string;
+  date: string;
+  excerpt: string;
+}
+
+interface Blog {
+  slug: string;
+  meta: BlogMeta;
+}
+
+interface BlogProps {
+  limit?: number;
+}
+
+async function getBlogs(): Promise<Blog[]> {
   const files = fs.readdirSync(path.join(process.cwd(), "src", "data", "blogs"));
 
   const blogs = files.map((file) => {
     const slug = file.replace(".md", "");
-    const meta = matter(fs.readFileSync(path.join(process.cwd(), "src", "data", "blogs", file))).data;
+    const meta = matter(fs.readFileSync(path.join(process.cwd(), "src", "data", "blogs", file))).data as BlogMeta;
 
     return {
       slug,
@@ -16,10 +31,10 @@ async function getBlogs() {
     };
   });
 
-  return blogs.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date));
+  return blogs.sort((a, b) => new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime());
 }
 
-export default async function Blog({ limit = undefined }) {
+export default async function Blog({ limit }: BlogProps) {
   const blogs = await getBlogs();
 
   return (
@@ -37,4 +52,4 @@ export default async function Blog({ limit = undefined }) {
       ))}
     </div>
   );
-}
+} 

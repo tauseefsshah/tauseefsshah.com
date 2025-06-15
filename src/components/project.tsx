@@ -1,6 +1,16 @@
 import { ArrowUpRight } from "lucide-react";
 
-export default function Project({ project }) {
+interface ProjectProps {
+  project: {
+    title: string;
+    link: string;
+    organisation: string;
+    stack: string[];
+    description: string;
+  };
+}
+
+export default function Project({ project }: ProjectProps) {
   return (
     <div className="flex flex-col gap-4">
       <h3 className="text-md font-semibold uppercase">{project.title}</h3>
@@ -28,4 +38,4 @@ export default function Project({ project }) {
       <p className="text-sm">{project.description}</p>
     </div>
   );
-}
+} 

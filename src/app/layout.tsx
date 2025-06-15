@@ -3,6 +3,7 @@ import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
 import { Outfit } from "next/font/google";
+import { ReactNode } from "react";
 
 import { ArrowUpRight } from "lucide-react";
 import Navigation from "@/components/navigation";
@@ -17,7 +18,39 @@ export const metadata = {
   description: "Personal Website of Tauseef Shah",
 };
 
-export default function RootLayout({ children }) {
+interface SocialMedia {
+  platform: string;
+  link: string;
+}
+
+interface RootLayoutProps {
+  children: ReactNode;
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
+  const socialMediaLinks: SocialMedia[] = [
+    {
+      platform: "x",
+      link: "https://x.com/tauseefsshah",
+    },
+    {
+      platform: "linkedin",
+      link: "https://linkedin.com/in/tauseefsshah",
+    },
+    {
+      platform: "github",
+      link: "https://github.com/tauseefsshah",
+    },
+    {
+      platform: "discord",
+      link: "https://discordapp.com/users/742727242823499847",
+    },
+    {
+      platform: "telegram",
+      link: "https://t.me/tauseefsshah",
+    },
+  ];
+
   return (
     <html lang="en" className={`${outfit.className} antialiased`}>
       <body>
@@ -45,28 +78,7 @@ export default function RootLayout({ children }) {
         <footer className="content-box my-8">
           <div className="flex flex-col items-center gap-4">
             <div className="flex flex-wrap justify-center gap-4">
-              {[
-                {
-                  platform: "x",
-                  link: "https://x.com/tauseefsshah",
-                },
-                {
-                  platform: "linkedin",
-                  link: "https://linkedin.com/in/tauseefsshah",
-                },
-                {
-                  platform: "github",
-                  link: "https://github.com/tauseefsshah",
-                },
-                {
-                  platform: "discord",
-                  link: "https://discordapp.com/users/742727242823499847",
-                },
-                {
-                  platform: "telegram",
-                  link: "https://t.me/tauseefsshah",
-                },
-              ].map((socialMedia) => (
+              {socialMediaLinks.map((socialMedia) => (
                 <a
                   key={socialMedia.platform}
                   href={socialMedia.link}
@@ -86,4 +98,4 @@ export default function RootLayout({ children }) {
       </body>
     </html>
   );
-}
+} 
