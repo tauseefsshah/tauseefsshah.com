@@ -17,6 +17,7 @@ function Header() {
             <Image src="/logo.svg" height={25} width={25} alt="Tauseef Shah" />
           </Link>
         </div>
+        
         <Navigation />
       </div>
     </header>
