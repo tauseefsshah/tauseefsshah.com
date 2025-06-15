@@ -53,7 +53,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
   return (
     <html lang="en" className={`${outfit.className} antialiased`}>
-      <body>
+      <body suppressHydrationWarning>
         <header className="py-4">
           <div className="flex items-center justify-between">
             <div
