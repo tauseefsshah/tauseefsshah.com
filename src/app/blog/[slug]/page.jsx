@@ -25,7 +25,7 @@ export default async function Page({ params }) {
   const _content = marked(content);
 
   return (
-    <main id="blog-content" className="space-y-8 py-20 max-w-screen-sm mx-auto">
+    <main id="blog-content" className="space-y-8 py-20 max-w-(--breakpoint-sm) mx-auto">
       <div>
         <h1 className="text-7xl font-black">{meta.title}</h1>
         <p className="text-xl font-semiold">{meta.date}</p>
