@@ -1,16 +1,14 @@
 import Link from "next/link";
-
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-export default function Blog({ limit = undefined }) {
-  const files = fs.readdirSync(path.join("data", "blogs"));
+async function getBlogs() {
+  const files = fs.readdirSync(path.join(process.cwd(), "src", "data", "blogs"));
 
   const blogs = files.map((file) => {
     const slug = file.replace(".md", "");
-
-    const meta = matter(fs.readFileSync(path.join("data", "blogs", file))).data;
+    const meta = matter(fs.readFileSync(path.join(process.cwd(), "src", "data", "blogs", file))).data;
 
     return {
       slug,
@@ -18,7 +16,11 @@ export default function Blog({ limit = undefined }) {
     };
   });
 
-  blogs.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date));
+  return blogs.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date));
+}
+
+export default async function Blog({ limit = undefined }) {
+  const blogs = await getBlogs();
 
   return (
     <div className="space-y-8">

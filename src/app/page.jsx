@@ -1,4 +1,4 @@
-import allProjects from "../data/projects.json";
+import allProjects from "@/data/projects.json";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -7,7 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 import Project from "@/components/project";
 import Blog from "@/components/blog";
 
-export default function Page() {
+export default async function Page() {
   const projects = allProjects.slice(0, 4);
 
   return (

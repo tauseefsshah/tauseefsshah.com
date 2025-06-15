@@ -2,9 +2,15 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Navigation() {
-  const pathname = usePathname().split("/")[1];
+  const pathname = usePathname();
+  const [currentPath, setCurrentPath] = useState("");
+
+  useEffect(() => {
+    setCurrentPath(pathname.split("/")[1]);
+  }, [pathname]);
 
   return (
     <nav id="navigation">
@@ -13,17 +19,17 @@ export default function Navigation() {
           {
             title: "About",
             link: "/about",
-            active: pathname === "about",
+            active: currentPath === "about",
           },
           {
             title: "Blog",
             link: "/blog",
-            active: pathname === "blog",
+            active: currentPath === "blog",
           },
           {
             title: "Projects",
             link: "/projects",
-            active: pathname === "projects",
+            active: currentPath === "projects",
           },
         ].map((navigationItem) => (
           <li
