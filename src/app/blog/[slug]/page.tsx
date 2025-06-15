@@ -3,12 +3,6 @@ import path from "path";
 import { marked } from "marked";
 import matter from "gray-matter";
 
-interface PageParams {
-  params: {
-    slug: string;
-  };
-}
-
 interface BlogMeta {
   title: string;
   date: string;
@@ -26,7 +20,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Page({ params }: PageParams) {
+export default async function Page({ params }: any) {
   const { slug } = params;
 
   const fileContent = fs.readFileSync(path.join("src", "data", "blogs", slug + ".md"));
