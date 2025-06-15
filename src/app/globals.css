@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
   --color-background: var(--background);
@@ -31,8 +31,8 @@
   text-wrap: balance;
 }
 
-@utility body-container {
-  @apply container mx-auto max-w-(--breakpoint-md) px-4 xl:px-0;
+@utility box-container {
+  @apply max-w-screen-md mx-auto px-4 xl:px-0;
 }
 
 @layer utilities {
@@ -55,7 +55,7 @@
 }
 
 body {
-  @apply body-container text-primary;
+  @apply text-primary;
 }
 
 a:hover {

@@ -54,7 +54,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={`${outfit.className} antialiased`}>
       <body suppressHydrationWarning>
-        <header className="py-4">
+        <header className="py-4 box-container">
           <div className="flex items-center justify-between">
             <div
               id="logo"
@@ -73,9 +73,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
           </div>
         </header>
 
-        <main>{children}</main>
+        <main className="box-container">{children}</main>
 
-        <footer className="content-box my-8">
+        <footer className="box-container my-8">
           <div className="flex flex-col items-center gap-4">
             <div className="flex flex-wrap justify-center gap-4">
               {socialMediaLinks.map((socialMedia) => (
@@ -98,4 +98,4 @@ export default function RootLayout({ children }: RootLayoutProps) {
       </body>
     </html>
   );
-} 
+}
