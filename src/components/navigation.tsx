@@ -89,8 +89,8 @@ export default function Navigation() {
                 </DropdownMenuTrigger>
 
                 <DropdownMenuContent
-                  align="end"
-                  className="min-w-20 mt-1 py-2 shadow-none"
+                  align="center"
+                  className="min-w-full mt-1 py-2 shadow-none"
                 >
                   {navigationItem.items.map((item) => (
                     <DropdownMenuItem key={item.title} asChild>
