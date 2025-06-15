@@ -47,8 +47,20 @@ export default function Navigation() {
           link: "/blog",
         },
         {
+          title: "Books",
+          link: "/collections/books",
+        },
+        {
           title: "Quotes",
           link: "/collections/quotes",
+        },
+        {
+          title: "YouTube",
+          link: "/collections/youtube",
+        },
+        {
+          title: "Proverbs",
+          link: "/collections/proverbs",
         },
       ],
     },
