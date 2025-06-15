@@ -15,7 +15,7 @@ interface BlogMeta {
 }
 
 export async function generateStaticParams() {
-  const files = fs.readdirSync(path.join("data", "blogs"));
+  const files = fs.readdirSync(path.join("src", "data", "blogs"));
 
   const slugs = files.map((file) => {
     return file.replace(".md", "");
@@ -29,17 +29,17 @@ export async function generateStaticParams() {
 export default async function Page({ params }: PageParams) {
   const { slug } = params;
 
-  const fileContent = fs.readFileSync(path.join("data", "blogs", slug + ".md"));
+  const fileContent = fs.readFileSync(path.join("src", "data", "blogs", slug + ".md"));
   const { data, content } = matter(fileContent);
   const meta = data as BlogMeta;
 
   const _content = marked(content);
 
   return (
-    <main id="blog-content" className="space-y-8 py-20 max-w-(--breakpoint-sm) mx-auto">
+    <main id="blog-content" className="space-y-8 py-20 max-w-[--breakpoint-sm] mx-auto">
       <div>
         <h1 className="text-7xl font-black">{meta.title}</h1>
-        <p className="text-xl font-semiold">{meta.date}</p>
+        <p className="text-xl font-semibold">{meta.date}</p>
       </div>
       <article
         className="space-y-8 text-xl text-gray-500"
@@ -49,4 +49,4 @@ export default async function Page({ params }: PageParams) {
       />
     </main>
   );
-} 
+}
