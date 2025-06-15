@@ -1,12 +1,11 @@
+import * as React from "react";
+
 import "./globals.css";
 
-import Link from "next/link";
-import Image from "next/image";
 import { Outfit } from "next/font/google";
-import { ReactNode } from "react";
 
-import { ArrowUpRight } from "lucide-react";
-import Navigation from "@/components/navigation";
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -18,83 +17,20 @@ export const metadata = {
   description: "Personal Website of Tauseef Shah",
 };
 
-interface SocialMedia {
-  platform: string;
-  link: string;
-}
-
 interface RootLayoutProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
-  const socialMediaLinks: SocialMedia[] = [
-    {
-      platform: "x",
-      link: "https://x.com/tauseefsshah",
-    },
-    {
-      platform: "linkedin",
-      link: "https://linkedin.com/in/tauseefsshah",
-    },
-    {
-      platform: "github",
-      link: "https://github.com/tauseefsshah",
-    },
-    {
-      platform: "discord",
-      link: "https://discordapp.com/users/742727242823499847",
-    },
-    {
-      platform: "telegram",
-      link: "https://t.me/tauseefsshah",
-    },
-  ];
 
   return (
     <html lang="en" className={`${outfit.className} antialiased`}>
       <body suppressHydrationWarning>
-        <header className="py-4 box-container">
-          <div className="flex items-center justify-between">
-            <div
-              id="logo"
-              className="rounded-full bg-white p-2 font-bold text-black"
-            >
-              <Link href="/">
-                <Image
-                  src="/logo.svg"
-                  height={25}
-                  width={25}
-                  alt="Tauseef Shah"
-                />
-              </Link>
-            </div>
-            <Navigation />
-          </div>
-        </header>
+        <Header />
 
         <main className="box-container">{children}</main>
 
-        <footer className="box-container my-8">
-          <div className="flex flex-col items-center gap-4">
-            <div className="flex flex-wrap justify-center gap-4">
-              {socialMediaLinks.map((socialMedia) => (
-                <a
-                  key={socialMedia.platform}
-                  href={socialMedia.link}
-                  target="_blank"
-                  title={socialMedia.platform}
-                  className="flex gap-1 items-center"
-                >
-                  {socialMedia.platform} <ArrowUpRight className="size-4" />
-                </a>
-              ))}
-            </div>
-            <div className="text-sm uppercase">
-              &copy; {new Date().getFullYear()}. Tauseef Shah
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
