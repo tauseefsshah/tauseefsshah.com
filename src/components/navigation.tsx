@@ -3,16 +3,16 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-interface NavigationItem {
-  title: string;
+interface INavigationItem {
   link: string;
+  title: string;
   active: boolean;
 }
 
 export default function Navigation() {
   const pathname = usePathname().split("/")[1];
 
-  const navigationItems: NavigationItem[] = [
+  const navigationItems: INavigationItem[] = [
     {
       title: "About",
       link: "/about",
@@ -46,7 +46,6 @@ export default function Navigation() {
               href={navigationItem.link}
               title={navigationItem.title}
               aria-label={navigationItem.title}
-              className=""
             >
               {navigationItem.title}
             </Link>
@@ -55,4 +54,4 @@ export default function Navigation() {
       </ul>
     </nav>
   );
-} 
+}

@@ -3,8 +3,8 @@
 import { ArrowUpRight } from "lucide-react";
 
 interface SocialMedia {
-  platform: string;
   link: string;
+  platform: string;
 }
 
 function Footer() {
