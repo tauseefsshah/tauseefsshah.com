@@ -1,7 +1,8 @@
 import Link from "next/link";
+
 import fs from "fs";
-import path from "path";
 import matter from "gray-matter";
+import path from "path";
 
 interface BlogMeta {
   title: string;
@@ -52,4 +53,4 @@ export default async function Blog({ limit }: BlogProps) {
       ))}
     </div>
   );
-} 
+}

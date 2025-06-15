@@ -1,3 +1,5 @@
+'use client';
+
 interface TechnologyStack {
   title: string;
   technologies: string[];

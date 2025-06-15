@@ -1,3 +1,5 @@
+'use client';
+
 import Project from "@/components/project";
 import projects from "../../data/projects.json";
 
