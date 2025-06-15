@@ -1,16 +1,30 @@
 import Link from "next/link";
 
 import fs from "fs";
-import path from "path";
 import matter from "gray-matter";
+import path from "path";
 
-export default function Blog({ limit = undefined }) {
-  const files = fs.readdirSync(path.join("data", "blogs"));
+interface BlogMeta {
+  title: string;
+  date: string;
+  excerpt: string;
+}
+
+interface Blog {
+  slug: string;
+  meta: BlogMeta;
+}
+
+interface BlogProps {
+  limit?: number;
+}
+
+async function getBlogs(): Promise<Blog[]> {
+  const files = fs.readdirSync(path.join(process.cwd(), "src", "data", "blogs"));
 
   const blogs = files.map((file) => {
     const slug = file.replace(".md", "");
-
-    const meta = matter(fs.readFileSync(path.join("data", "blogs", file))).data;
+    const meta = matter(fs.readFileSync(path.join(process.cwd(), "src", "data", "blogs", file))).data as BlogMeta;
 
     return {
       slug,
@@ -18,7 +32,11 @@ export default function Blog({ limit = undefined }) {
     };
   });
 
-  blogs.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date));
+  return blogs.sort((a, b) => new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime());
+}
+
+export default async function Blog({ limit }: BlogProps) {
+  const blogs = await getBlogs();
 
   return (
     <div className="space-y-8">

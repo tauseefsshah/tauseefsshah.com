@@ -3,29 +3,37 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+interface NavigationItem {
+  title: string;
+  link: string;
+  active: boolean;
+}
+
 export default function Navigation() {
   const pathname = usePathname().split("/")[1];
+
+  const navigationItems: NavigationItem[] = [
+    {
+      title: "About",
+      link: "/about",
+      active: pathname === "about",
+    },
+    {
+      title: "Blog",
+      link: "/blog",
+      active: pathname === "blog",
+    },
+    {
+      title: "Projects",
+      link: "/projects",
+      active: pathname === "projects",
+    },
+  ];
 
   return (
     <nav id="navigation">
       <ul className="flex gap-8">
-        {[
-          {
-            title: "About",
-            link: "/about",
-            active: pathname === "about",
-          },
-          {
-            title: "Blog",
-            link: "/blog",
-            active: pathname === "blog",
-          },
-          {
-            title: "Projects",
-            link: "/projects",
-            active: pathname === "projects",
-          },
-        ].map((navigationItem) => (
+        {navigationItems.map((navigationItem) => (
           <li
             key={navigationItem.title}
             className={
@@ -47,4 +55,4 @@ export default function Navigation() {
       </ul>
     </nav>
   );
-}
+} 

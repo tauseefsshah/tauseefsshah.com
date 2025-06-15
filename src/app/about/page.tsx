@@ -1,5 +1,12 @@
+'use client';
+
+interface TechnologyStack {
+  title: string;
+  technologies: string[];
+}
+
 export default function Page() {
-  const technologyStack = [
+  const technologyStack: TechnologyStack[] = [
     {
       title: "Frontend",
       technologies: [
@@ -64,7 +71,7 @@ export default function Page() {
     },
   ];
 
-  const currentSetup = [
+  const currentSetup: TechnologyStack[] = [
     {
       title: "Hardware",
       technologies: [
@@ -163,4 +170,4 @@ export default function Page() {
       </section>
     </main>
   );
-}
+} 
