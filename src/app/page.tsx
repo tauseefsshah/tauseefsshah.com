@@ -1,11 +1,12 @@
 import allProjects from "@/data/projects.json";
 
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+
+import Blog from "@/components/blog";
+import Project from "@/components/project";
 
 import { ArrowUpRight } from "lucide-react";
-import Project from "@/components/project";
-import Blog from "@/components/blog";
 
 interface Action {
   title: string;

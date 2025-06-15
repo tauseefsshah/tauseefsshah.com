@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
 import { ArrowUpRight } from "lucide-react";
 
 interface SocialMedia {
-  platform: string;
   link: string;
+  platform: string;
 }
 
-export default function Footer() {
+function Footer() {
   const socialMediaLinks: SocialMedia[] = [
     {
       platform: "x",
@@ -32,14 +32,14 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="content-box my-8">
+    <footer className="box-container my-8">
       <div className="flex flex-col items-center gap-4">
         <div className="flex flex-wrap justify-center gap-4">
           {socialMediaLinks.map((socialMedia) => (
             <a
-              key={socialMedia.platform}
-              href={socialMedia.link}
               target="_blank"
+              href={socialMedia.link}
+              key={socialMedia.platform}
               title={socialMedia.platform}
               className="flex gap-1 items-center"
             >
@@ -53,4 +53,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-} 
+}
+
+export default Footer;
