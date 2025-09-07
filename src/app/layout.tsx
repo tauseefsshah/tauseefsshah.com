@@ -2,12 +2,12 @@ import * as React from "react";
 
 import "./globals.css";
 
-import { Outfit } from "next/font/google";
+import { Bricolage_Grotesque } from "next/font/google";
 
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 
-const outfit = Outfit({
+const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ["latin"],
   display: "swap",
 });
@@ -23,7 +23,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className={`${outfit.className} antialiased`}>
+    <html lang="en" className={`${bricolageGrotesque.className} antialiased`}>
       <body suppressHydrationWarning>
         <Header />
 
