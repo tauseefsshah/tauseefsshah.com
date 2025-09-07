@@ -27,14 +27,9 @@ export default function Navigation() {
 
   const navigationItems: INavigationItem[] = [
     {
-      title: "About",
-      link: "/about",
-      active: pathname === "about",
-    },
-    {
-      title: "Projects",
-      link: "/projects",
-      active: pathname === "projects",
+      title: "Experience",
+      link: "/experience",
+      active: pathname === "experience",
     },
     {
       title: "Collections",
