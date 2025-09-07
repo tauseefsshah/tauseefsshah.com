@@ -17,14 +17,19 @@ interface Blog {
 
 interface BlogProps {
   limit?: number;
+  showExcerpt?: boolean;
 }
 
 async function getBlogs(): Promise<Blog[]> {
-  const files = fs.readdirSync(path.join(process.cwd(), "src", "data", "blogs"));
+  const files = fs.readdirSync(
+    path.join(process.cwd(), "src", "data", "blogs")
+  );
 
   const blogs = files.map((file) => {
     const slug = file.replace(".md", "");
-    const meta = matter(fs.readFileSync(path.join(process.cwd(), "src", "data", "blogs", file))).data as BlogMeta;
+    const meta = matter(
+      fs.readFileSync(path.join(process.cwd(), "src", "data", "blogs", file))
+    ).data as BlogMeta;
 
     return {
       slug,
@@ -32,10 +37,12 @@ async function getBlogs(): Promise<Blog[]> {
     };
   });
 
-  return blogs.sort((a, b) => new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime());
+  return blogs.sort(
+    (a, b) => new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime()
+  );
 }
 
-export default async function Blog({ limit }: BlogProps) {
+export default async function Blog({ limit, showExcerpt = true }: BlogProps) {
   const blogs = await getBlogs();
 
   return (
@@ -48,7 +55,9 @@ export default async function Blog({ limit }: BlogProps) {
             </Link>
             <p className="font-semiold text-slate-600">{blog.meta.date}</p>
           </div>
-          <p className="text-slate-600 line-clamp-3">{blog.meta.excerpt}</p>
+          {showExcerpt && (
+            <p className="text-slate-600 line-clamp-3">{blog.meta.excerpt}</p>
+          )}
         </div>
       ))}
     </div>

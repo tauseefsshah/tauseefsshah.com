@@ -1,3 +1,10 @@
+import Image from "next/image";
+import Link from "next/link";
+
+import Blog from "@/components/blog";
+
+import { ArrowUpRight, LucideIcon, MailIcon, VideoIcon } from "lucide-react";
+
 import CivicDataLab from "@/../public/experience-logos/civicdatalab.jpeg";
 import Codefuel from "@/../public/experience-logos/codefuel.jpeg";
 import Flynterest from "@/../public/experience-logos/flynterest.jpeg";
@@ -5,14 +12,6 @@ import LunarTree from "@/../public/experience-logos/lunartree.jpeg";
 import Orchardly from "@/../public/experience-logos/orchardly.jpeg";
 import SuperDM from "@/../public/experience-logos/superdm.jpeg";
 import TauseefShah from "@/../public/tauseef-shah.jpg";
-import allProjects from "@/data/projects.json";
-
-import Image from "next/image";
-import Link from "next/link";
-
-import Blog from "@/components/blog";
-
-import { ArrowUpRight, LucideIcon, MailIcon, VideoIcon } from "lucide-react";
 
 interface Action {
   link: string;
@@ -22,8 +21,6 @@ interface Action {
 }
 
 export default async function Page() {
-  const projects = allProjects.slice(0, 4);
-
   const actions: Action[] = [
     {
       title: "Send A Message",
@@ -149,9 +146,9 @@ export default async function Page() {
       </section>
 
       <section id="blog">
-        <h1 className="mb-2 text-base text-black/40 font-bold">Blog</h1>
+        <h1 className="mb-2 text-base text-black/40 font-bold">Writing</h1>
         <div className="space-y-8">
-          <Blog limit={3} />
+          <Blog limit={3} showExcerpt={false} />
 
           <div>
             <Link className="flex gap-1 items-center" href="/blog">
